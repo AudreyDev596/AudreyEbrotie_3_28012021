@@ -1,10 +1,9 @@
-@media screen and (min-width: 375px) 
-{
+@media screen and (min-width: 375px) {
     @font-face {
         font-family: 'Shrikhand';
         src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
     }
-    
+
     @font-face {
         font-family: 'Roboto';
         src: url('fonts/Roboto-Regular.ttf') format('truetype');
@@ -25,345 +24,351 @@
         src: url('fonts/Roboto-Medium.ttf') format('truetype');
     }
 
-body, html {
-    max-width: 100%;
-    margin: auto;
-    font-family: 'RobotoLight';
-}
-
-main {
-    width: 100%;
-    margin: auto;
-}
-
-$grey: #E9E9E9;
-$lightgrey: #F9F9F9;
-$darkgrey: #9F9E9E;
-$white: #FFFFFF;
-$pink : #FF79DA;
-$purple: #9356DC;
-$mintgreen: #99E2D0;
-
-h1 {
-    font-size: 7vw;
-    font-family: 'RobotoBold';
-}
-
-h2 {
-    font-size: 6.5vw;
-    font-family: 'RobotoBold';
-}
-
-h3 {
-    font-size: 5vw;
-    font-family: 'RobotoBold';
-    margin-bottom: -8%;
-}
-
-h4 {
-    font-size: 4.5vw;
-    font-family: 'RobotoMedium';
-}
-
-span {
-    font-size: 2.8vw;
-}
-
-p {
-    font-size: 4.7vw;
-    font-family: 'RobotoLight';
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-// <!-- Header : logo -->
-
-#header__logoBlock {
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-
-
-    &--logo {
-    display: flex;
-    justify-content: center;
-    
-
-    img {
-        width: 35rem;
+    body,
+    html {
+        max-width: 100%;
+        margin: auto;
+        font-family: 'RobotoLight';
     }
+
+    main {
+        width: 100%;
+        margin: auto;
     }
-}
 
-// <!-- Recherche : formulaire -->
+    $white: #FFFFFF;
+    $lightgrey: #ececec;
+    $lightergrey: #F9F9F9;
+    $darkgrey: #9F9E9E;
+    $grey: #dcdcdc;
+    $darkergrey: #323232;
+    $pink : #FF79DA;
+    $purple: #9356DC;
+    $mintgreen: #99E2D0;
+    $darkmintgreen : #148b6d;
 
-#searchPart1 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: $grey;
-    margin-top: 5%;
-    -webkit-box-shadow:inset 0px 9px 8px -5px $darkgrey;
-    -moz-box-shadow:inset 0px 9px 8px -5px $darkgrey;
-    box-shadow:inset 0px 9px 8px -5px $darkgrey;    
-    
-    &__iconBlock {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 28%;
+    h1 {
+        font-size: 7vw;
+        font-family: 'RobotoBold';
+    }
+
+    h2 {
+        font-size: 6.5vw;
+        font-family: 'RobotoBold';
+    }
+
+    h3 {
+        font-size: 5vw;
+        font-family: 'RobotoBold';
+        margin-bottom: -8%;
+    }
+
+    h4 {
         font-size: 4.5vw;
-        margin-right: 1rem;
-        padding-bottom: 0.5rem;
-    
-        &--icon {
-            width: 2.5rem;
-        }
+        font-family: 'RobotoMedium';
     }
 
-    &__textBlock {
-        width: 72%;
-        padding: 2rem 0 0 2.5rem;
-    }
-}
-
-::placeholder {
-    color: rgb(55, 55, 55);
-    font-size: 5vw;
-}
-
-input {
-    background-color: transparent;
-    border-style: none;
-    height: 8rem;
-    margin-left: 0.5rem;
-}
-
-#searchPart2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: $lightgrey;
-
-    &__titleBlock {
-        text-align: center;
-        width: 75%;
-        margin: 5% 0 -5% 0;
+    span {
+        font-size: 2.5vw;
     }
 
-    &__subtitleBlock {
-        text-align: center;
-        width: 89%;
-        margin-bottom: 8rem;
+    p {
+        font-size: 4.7vw;
+        font-family: 'RobotoLight';
     }
 
-    &__buttonBlock {
-        display: flex;
-        align-items: center;
-        margin-top: -5%;
-        width: 65%;
-        height: 8rem;
-        margin-bottom: 10rem;
-    
-        &--button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            width: 100%;
-            color: $white;
-            font-size: 4.7vw;
-            font-family: 'Roboto';
-            font-weight: 400;
-            border-radius: 60px;
-            box-shadow: 2px 2px 6px $darkgrey;
-            background: #FF79DB;
-            background: -webkit-linear-gradient(top left, #FF79DB, #9456DC);
-            background: -moz-linear-gradient(top left, #FF79DB, #9456DC);
-            background: linear-gradient(to bottom right, #FF79DB, #9456DC);
-        }
-    }
-}
-
-// <!-- Fonctionnement / functioning -->
-
-#functioning__titleBlock {
-    margin: 5em 0 4em 3em;
-}
-
-#functioning__globalBlock {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 90%;
-}
-
-.functioning__entry {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    background-color: $lightgrey;
-    border-radius: 50px;
-    margin: 1rem 0 1rem 0;
-    box-shadow: 2px 2px 15px $darkgrey;
-
-    &--numberBlock {
-        background-color: $purple;
-        width: 6%;
-        height: 5%;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        margin-left: -1.5rem;
-    
-        &--number {
-            color: white;
-            display: flex;
-            font-size: 2rem;
-            margin: 8% 8%;
-        }
+    a {
+        text-decoration: none;
+        color: black;
     }
 
-    &--iconBlock {
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    // <!-- Header : logo -->
 
-    &--mobileIcon, &--listIcon, &--storeIcon {
-        font-size: 3rem;
-        color: grey;
-        }
-    }
-
-    &--text {
+    #header__logoBlock {
         width: 80%;
-    }
-}
-
-.current .functioning__entry {
-    background-color: rgba(147, 86, 220, 0.2)   
-}
-
-.current .functioning__entry--iconBlock--storeIcon {
-    color: $purple;
-}
-
-// <!-- Restaurants -->
-
-#restaurants__globalBlock {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: $lightgrey;
-    padding-bottom: 20%;
-    margin-top: 20%;
-}
-
-#restaurants__titleBlock {
-    margin: 5em 0 0 3em;
-}
-
-#restaurants__underBlock {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 85%;
-    margin-top: -5%;
-}
-
-.restaurants__cards {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 600px;
-    box-shadow: 6px 5px 12px $darkgrey;
-    border-radius: 50px;
-    margin-top: 10%;
-
-    img {
-        width: 100%;
-        border-radius: 50px;
-    }
-
-    &--Tag {
-        background-color: $mintgreen;
-        color: #148b6d;
+        margin: auto;
+        margin-top: 5%;
         display: flex;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        align-self: flex-end;
-        margin: 4%;
-        width: 25%;
-        height: 6%;
         justify-content: center;
-        align-items: center;
-    }
 
-    &--Banner {
-        background-color: $white;
-        width: 100%;
-        height: 35%;
-        margin-top: -20%;
-        opacity: 0.99;
-        display: flex;
-        flex-direction: row;  
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    
-        &--text {
-            width: 80%;
-            margin-left: 5%;
-        }
-        
-        &--icon {
+
+        &--logo {
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 20%;
-            height: auto;
-            margin-bottom: 3%;
-        }    
-    
-        &--icon--heartIcon {
-            font-size: 4rem;
-        
-            &:hover {
-                color: $purple;
-                cursor: pointer;
+
+
+            img {
+                width: 35rem;
             }
         }
-        
     }
-}
 
-// <!-- Footer -->
+    // <!-- Recherche : formulaire -->
 
-#footer {
-    background-color: rgb(50, 50, 50); 
-}
+    #searchPart1 {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $lightgrey;
+        margin-top: 5%;
+        -webkit-box-shadow: inset 0px 9px 8px -5px $darkgrey;
+        -moz-box-shadow: inset 0px 9px 8px -5px $darkgrey;
+        box-shadow: inset 0px 9px 8px -5px $darkgrey;
 
-#footer__logoBlock {
-    width: 85%;
-    margin: auto;
-    padding-top: 5%;
-}
+        &__iconBlock {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 28%;
+            font-size: 4.5vw;
+            margin-right: 1rem;
+            padding-bottom: 0.5rem;
 
-#footer__textBlock {
-    width: 85%;
-    margin: auto;
-    color: $white;
-    padding-bottom: 5%;
-}
+            &--icon {
+                width: 2.5rem;
+            }
+        }
+
+        &__textBlock {
+            width: 72%;
+            padding: 2.5rem 0 0 2.5rem;
+        }
+    }
+
+    ::placeholder {
+        color: $darkergrey;
+        font-size: 5vw;
+    }
+
+    input {
+        background-color: transparent;
+        border-style: none;
+        height: 8rem;
+        margin-left: 0.5rem;
+    }
+
+    #searchPart2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: $lightergrey;
+
+        &__titleBlock {
+            text-align: center;
+            width: 75%;
+            margin: 5% 0 -2% 0;
+        }
+
+        &__subtitleBlock {
+            text-align: center;
+            width: 89%;
+            margin-bottom: 8rem;
+        }
+
+        &__buttonBlock {
+            display: flex;
+            align-items: center;
+            margin-top: -5%;
+            width: 65%;
+            height: 8rem;
+            margin-bottom: 10rem;
+
+            &--button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                color: $white;
+                font-size: 4.7vw;
+                font-family: 'Roboto';
+                font-weight: 400;
+                border-radius: 60px;
+                box-shadow: 2px 2px 6px $darkgrey;
+                background: #FF79DB;
+                background: -webkit-linear-gradient(top left, #FF79DB, #9456DC);
+                background: -moz-linear-gradient(top left, #FF79DB, #9456DC);
+                background: linear-gradient(to bottom right, #FF79DB, #9456DC);
+            }
+        }
+    }
+
+    // <!-- Fonctionnement / functioning -->
+
+    #functioning__titleBlock {
+        margin: 5em 0 4em 3em;
+    }
+
+    #functioning__globalBlock {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+    }
+
+    .functioning__entry {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+        background-color: $lightergrey;
+        border-radius: 50px;
+        margin: 1rem 0 1rem 0;
+        box-shadow: 2px 2px 15px $grey;
+
+        &--numberBlock {
+            background-color: $purple;
+            width: 6%;
+            height: 5%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            margin-left: -1.5rem;
+
+            &--number {
+                color: $white;
+                display: flex;
+                font-size: 2rem;
+                margin: 8% 8%;
+            }
+        }
+
+        &--iconBlock {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &--mobileIcon,
+            &--listIcon,
+            &--storeIcon {
+                font-size: 3rem;
+                color: $darkgrey;
+            }
+        }
+
+        &--text {
+            width: 80%;
+        }
+    }
+
+    .current .functioning__entry {
+        background-color: rgba(147, 86, 220, 0.2)
+    }
+
+    .current .functioning__entry--iconBlock--storeIcon {
+        color: $purple;
+    }
+
+    // <!-- Restaurants -->
+
+    #restaurants__globalBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $lightergrey;
+        padding-bottom: 20%;
+        margin-top: 20%;
+    }
+
+    #restaurants__titleBlock {
+        margin: 5em 0 0 3em;
+    }
+
+    #restaurants__underBlock {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 85%;
+        margin-top: -5%;
+    }
+
+    .restaurants__cards {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 600px;
+        box-shadow: 6px 5px 10px $grey;
+        border-radius: 50px;
+        margin-top: 10%;
+
+        img {
+            width: 100%;
+            border-radius: 50px;
+        }
+
+        &--Tag {
+            background-color: $mintgreen;
+            color: $darkmintgreen;
+            display: flex;
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-self: flex-end;
+            margin: 4%;
+            width: 25%;
+            height: 6%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--Banner {
+            background-color: $white;
+            width: 100%;
+            height: 35%;
+            margin-top: -20%;
+            opacity: 0.99;
+            display: flex;
+            flex-direction: row;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+            &--text {
+                width: 80%;
+                margin-left: 5%;
+            }
+
+            &--icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                height: auto;
+                margin-bottom: 3%;
+            }
+
+            &--icon--heartIcon {
+                font-size: 4rem;
+
+                &:hover {
+                    color: $purple;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    // <!-- Footer -->
+
+    #footer {
+        background-color: $darkergrey;
+    }
+
+    #footer__logoBlock {
+        width: 85%;
+        margin: auto;
+        padding-top: 5%;
+    }
+
+    #footer__textBlock {
+        width: 85%;
+        margin: auto;
+        color: $white;
+        padding-bottom: 5%;
+    }
 
 }

@@ -19,7 +19,8 @@
     font-family: 'RobotoMedium';
     src: url("fonts/Roboto-Medium.ttf") format("truetype");
   }
-  body, html {
+  body,
+  html {
     max-width: 100%;
     margin: auto;
     font-family: 'RobotoLight';
@@ -46,7 +47,7 @@
     font-family: 'RobotoMedium';
   }
   span {
-    font-size: 2.8vw;
+    font-size: 2.5vw;
   }
   p {
     font-size: 4.7vw;
@@ -87,7 +88,7 @@
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100%;
-    background-color: #E9E9E9;
+    background-color: #ececec;
     margin-top: 5%;
     -webkit-box-shadow: inset 0px 9px 8px -5px #9F9E9E;
     box-shadow: inset 0px 9px 8px -5px #9F9E9E;
@@ -112,22 +113,22 @@
   }
   #searchPart1__textBlock {
     width: 72%;
-    padding: 2rem 0 0 2.5rem;
+    padding: 2.5rem 0 0 2.5rem;
   }
   ::-webkit-input-placeholder {
-    color: #373737;
+    color: #323232;
     font-size: 5vw;
   }
   :-ms-input-placeholder {
-    color: #373737;
+    color: #323232;
     font-size: 5vw;
   }
   ::-ms-input-placeholder {
-    color: #373737;
+    color: #323232;
     font-size: 5vw;
   }
   ::placeholder {
-    color: #373737;
+    color: #323232;
     font-size: 5vw;
   }
   input {
@@ -153,7 +154,7 @@
   #searchPart2__titleBlock {
     text-align: center;
     width: 75%;
-    margin: 5% 0 -5% 0;
+    margin: 5% 0 -2% 0;
   }
   #searchPart2__subtitleBlock {
     text-align: center;
@@ -225,8 +226,8 @@
     background-color: #F9F9F9;
     border-radius: 50px;
     margin: 1rem 0 1rem 0;
-    -webkit-box-shadow: 2px 2px 15px #9F9E9E;
-            box-shadow: 2px 2px 15px #9F9E9E;
+    -webkit-box-shadow: 2px 2px 15px #dcdcdc;
+            box-shadow: 2px 2px 15px #dcdcdc;
   }
   .functioning__entry--numberBlock {
     background-color: #9356DC;
@@ -242,7 +243,7 @@
     margin-left: -1.5rem;
   }
   .functioning__entry--numberBlock--number {
-    color: white;
+    color: #FFFFFF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -267,7 +268,7 @@
   }
   .functioning__entry--iconBlock--mobileIcon, .functioning__entry--iconBlock--listIcon, .functioning__entry--iconBlock--storeIcon {
     font-size: 3rem;
-    color: grey;
+    color: #9F9E9E;
   }
   .functioning__entry--text {
     width: 80%;
@@ -316,8 +317,8 @@
             flex-direction: column;
     width: auto;
     height: 600px;
-    -webkit-box-shadow: 6px 5px 12px #9F9E9E;
-            box-shadow: 6px 5px 12px #9F9E9E;
+    -webkit-box-shadow: 6px 5px 10px #dcdcdc;
+            box-shadow: 6px 5px 10px #dcdcdc;
     border-radius: 50px;
     margin-top: 10%;
   }
