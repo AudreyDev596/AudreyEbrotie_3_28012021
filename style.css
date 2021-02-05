@@ -1,0 +1,408 @@
+@media screen and (min-width: 375px) {
+  @font-face {
+    font-family: 'Shrikhand';
+    src: url("fonts/Shrikhand-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Roboto';
+    src: url("fonts/Roboto-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'RobotoLight';
+    src: url("fonts/Roboto-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'RobotoBold';
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'RobotoMedium';
+    src: url("fonts/Roboto-Medium.ttf") format("truetype");
+  }
+  body, html {
+    max-width: 100%;
+    margin: auto;
+    font-family: 'RobotoLight';
+  }
+  main {
+    width: 100%;
+    margin: auto;
+  }
+  h1 {
+    font-size: 7vw;
+    font-family: 'RobotoBold';
+  }
+  h2 {
+    font-size: 6.5vw;
+    font-family: 'RobotoBold';
+  }
+  h3 {
+    font-size: 5vw;
+    font-family: 'RobotoBold';
+    margin-bottom: -8%;
+  }
+  h4 {
+    font-size: 4.5vw;
+    font-family: 'RobotoMedium';
+  }
+  span {
+    font-size: 2.8vw;
+  }
+  p {
+    font-size: 4.7vw;
+    font-family: 'RobotoLight';
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  #header__logoBlock {
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #header__logoBlock--logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #header__logoBlock--logo img {
+    width: 35rem;
+  }
+  #searchPart1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    background-color: #E9E9E9;
+    margin-top: 5%;
+    -webkit-box-shadow: inset 0px 9px 8px -5px #9F9E9E;
+    box-shadow: inset 0px 9px 8px -5px #9F9E9E;
+  }
+  #searchPart1__iconBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 28%;
+    font-size: 4.5vw;
+    margin-right: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  #searchPart1__iconBlock--icon {
+    width: 2.5rem;
+  }
+  #searchPart1__textBlock {
+    width: 72%;
+    padding: 2rem 0 0 2.5rem;
+  }
+  ::-webkit-input-placeholder {
+    color: #373737;
+    font-size: 5vw;
+  }
+  :-ms-input-placeholder {
+    color: #373737;
+    font-size: 5vw;
+  }
+  ::-ms-input-placeholder {
+    color: #373737;
+    font-size: 5vw;
+  }
+  ::placeholder {
+    color: #373737;
+    font-size: 5vw;
+  }
+  input {
+    background-color: transparent;
+    border-style: none;
+    height: 8rem;
+    margin-left: 0.5rem;
+  }
+  #searchPart2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: #F9F9F9;
+  }
+  #searchPart2__titleBlock {
+    text-align: center;
+    width: 75%;
+    margin: 5% 0 -5% 0;
+  }
+  #searchPart2__subtitleBlock {
+    text-align: center;
+    width: 89%;
+    margin-bottom: 8rem;
+  }
+  #searchPart2__buttonBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -5%;
+    width: 65%;
+    height: 8rem;
+    margin-bottom: 10rem;
+  }
+  #searchPart2__buttonBlock--button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 4.7vw;
+    font-family: 'Roboto';
+    font-weight: 400;
+    border-radius: 60px;
+    -webkit-box-shadow: 2px 2px 6px #9F9E9E;
+            box-shadow: 2px 2px 6px #9F9E9E;
+    background: #FF79DB;
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF79DB), to(#9456DC));
+    background: linear-gradient(to bottom right, #FF79DB, #9456DC);
+  }
+  #functioning__titleBlock {
+    margin: 5em 0 4em 3em;
+  }
+  #functioning__globalBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    width: 90%;
+  }
+  .functioning__entry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #F9F9F9;
+    border-radius: 50px;
+    margin: 1rem 0 1rem 0;
+    -webkit-box-shadow: 2px 2px 15px #9F9E9E;
+            box-shadow: 2px 2px 15px #9F9E9E;
+  }
+  .functioning__entry--numberBlock {
+    background-color: #9356DC;
+    width: 6%;
+    height: 5%;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: -1.5rem;
+  }
+  .functioning__entry--numberBlock--number {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 2rem;
+    margin: 8% 8%;
+  }
+  .functioning__entry--iconBlock {
+    width: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .functioning__entry--iconBlock--mobileIcon, .functioning__entry--iconBlock--listIcon, .functioning__entry--iconBlock--storeIcon {
+    font-size: 3rem;
+    color: grey;
+  }
+  .functioning__entry--text {
+    width: 80%;
+  }
+  .current .functioning__entry {
+    background-color: rgba(147, 86, 220, 0.2);
+  }
+  .current .functioning__entry--iconBlock--storeIcon {
+    color: #9356DC;
+  }
+  #restaurants__globalBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    background-color: #F9F9F9;
+    padding-bottom: 20%;
+    margin-top: 20%;
+  }
+  #restaurants__titleBlock {
+    margin: 5em 0 0 3em;
+  }
+  #restaurants__underBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    width: 85%;
+    margin-top: -5%;
+  }
+  .restaurants__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    height: 600px;
+    -webkit-box-shadow: 6px 5px 12px #9F9E9E;
+            box-shadow: 6px 5px 12px #9F9E9E;
+    border-radius: 50px;
+    margin-top: 10%;
+  }
+  .restaurants__cards img {
+    width: 100%;
+    border-radius: 50px;
+  }
+  .restaurants__cards--Tag {
+    background-color: #99E2D0;
+    color: #148b6d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin: 4%;
+    width: 25%;
+    height: 6%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .restaurants__cards--Banner {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 35%;
+    margin-top: -20%;
+    opacity: 0.99;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  .restaurants__cards--Banner--text {
+    width: 80%;
+    margin-left: 5%;
+  }
+  .restaurants__cards--Banner--icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 20%;
+    height: auto;
+    margin-bottom: 3%;
+  }
+  .restaurants__cards--Banner--icon--heartIcon {
+    font-size: 4rem;
+  }
+  .restaurants__cards--Banner--icon--heartIcon:hover {
+    color: #9356DC;
+    cursor: pointer;
+  }
+  #footer {
+    background-color: #323232;
+  }
+  #footer__logoBlock {
+    width: 85%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  #footer__textBlock {
+    width: 85%;
+    margin: auto;
+    color: #FFFFFF;
+    padding-bottom: 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

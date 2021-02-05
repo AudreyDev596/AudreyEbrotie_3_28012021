@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ohmyfood!</title>
+</head>
+
+<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<body>
+    <main>
+        <!-- Header : logo -->
+
+        <div id="header__logoBlock">
+            <a id="header__logoBlock--logo" href="index.html"><img src="images/logo/ohmyfood.png"
+                    alt="logo ohmyfood"></a>
+        </div>
+
+        <!-- Recherche : formulaire -->
+
+        <div id="searchPart1">
+            <div id="searchPart1__iconBlock">
+                <svg id="searchPart1__iconBlock--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path style="fill: rgb(55, 55, 55)"
+                        d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+                </svg>
+            </div>
+            <div id="searchPart1__textBlock">
+                <input type="text" id="ville" name="ville" required minlength="2" maxlength="30" size="60"
+                    placeholder="Paris, Belleville" />
+            </div>
+        </div>
+
+        <div id="searchPart2">
+            <div id="searchPart2__titleBlock">
+                <h1>Réservez le menu qui vous convient</h1>
+            </div>
+            <div id="searchPart2__subtitleBlock">
+                <span>Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
+            </div>
+
+            <div id="searchPart2__buttonBlock">
+                <a id="searchPart2__buttonBlock--button" href="#">Explorer nos restaurants</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Fonctionnement / functioning -->
+
+        <div id="functioning__titleBlock">
+            <h2>Fonctionnement</h2>
+        </div>
+
+        <div id="functioning__globalBlock">
+
+            <a href="#">
+                <div class="functioning__entry">
+                    <div class="functioning__entry--numberBlock">
+                        <p class="functioning__entry--numberBlock--number">1</p>
+                    </div>
+                    <div class="functioning__entry--iconBlock">
+                        <div class="functioning__entry--iconBlock--mobileIcon"><i class="fas fa-mobile-alt"></i></div>
+                    </div>
+                    <div class="functioning__entry--text">
+                        <h4>Choisissez un restaurant</h4>
+                    </div>
+
+                </div>
+            </a>
+
+            <!-- ************************************************* -->
+
+            <a href="#">
+                <div class="functioning__entry">
+                    <div class="functioning__entry--numberBlock">
+                        <p class="functioning__entry--numberBlock--number">2</p>
+                    </div>
+                    <div class="functioning__entry--iconBlock">
+                        <div class="functioning__entry--iconBlock--listIcon"><i class="fas fa-list-ul"></i></div>
+
+                    </div>
+                    <div class="functioning__entry--text">
+                        <h4>Composez votre menu</h4>
+                    </div>
+                </div>
+            </a>
+            <!-- ************************************************* -->
+
+            <a href="#" class="current">
+                <div class="functioning__entry">
+                    <div class="functioning__entry--numberBlock">
+                        <p class="functioning__entry--numberBlock--number">3</p>
+                    </div>
+                    <div class="functioning__entry--iconBlock">
+                        <div class="functioning__entry--iconBlock--storeIcon"><i class="fas fa-store"></i></div>
+                    </div>
+                    <div class="functioning__entry--text">
+                        <h4>Dégustez au restaurant</h4>
+                    </div>
+
+                </div>
+            </a>
+
+        </div>
+
+
+        <!-- Restaurants -->
+
+
+        <div id="restaurants__globalBlock">
+
+            <div id="restaurants__titleBlock">
+                <h2>Restaurants</h2>
+            </div>
+
+            <div id="restaurants__underBlock">
+
+                <div class="restaurants__cards">
+                    <img src="images/restaurants/palette-du-gout.jpg" alt="photo restaurant La palette du goût">
+
+                    <div class="restaurants__cards--Tag">
+                        <h4>Nouveau</h4>
+                    </div>
+
+                    <div class="restaurants__cards--Banner">
+                        <div class="restaurants__cards--Banner--text">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                        </div>
+
+                        <div class="restaurants__cards--Banner--icon">
+                            <div class="restaurants__cards--Banner--icon--heartIcon">
+                                <i class="fal fa-heart"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ************************************************* -->
+
+                <div class="restaurants__cards">
+                    <img src="images/restaurants/redim/note-enchantee.jpg" alt="photo restaurant La note enchantée">
+
+                    <div class="restaurants__cards--Tag">
+                        <h4>Nouveau</h4>
+                    </div>
+
+                    <div class="restaurants__cards--Banner">
+                        <div class="restaurants__cards--Banner--text">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p>
+                        </div>
+
+                        <div class="restaurants__cards--Banner--icon">
+                            <div class="restaurants__cards--Banner--icon--heartIcon">
+                                <i class="fal fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ************************************************* -->
+
+                <div class="restaurants__cards">
+                    <img src="images/restaurants/a-la-francaise.jpg" alt="photo restaurant A la française">
+
+                    <div class="restaurants__cards--Banner">
+                        <div class="restaurants__cards--Banner--text">
+                            <h3>A la française</h3>
+                            <p>Cité Rouge</p>
+                        </div>
+
+                        <div class="restaurants__cards--Banner--icon">
+                            <div class="restaurants__cards--Banner--icon--heartIcon">
+                                <i class="fal fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ************************************************* -->
+
+                <div class="restaurants__cards">
+                    <img src="images/restaurants/delice-des-sens.jpg" alt="photo restaurant Le délice des sens">
+
+                    <div class="restaurants__cards--Banner">
+                        <div class="restaurants__cards--Banner--text">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p>
+                        </div>
+
+                        <div class="restaurants__cards--Banner--icon">
+                            <div class="restaurants__cards--Banner--icon--heartIcon">
+                                <i class="fal fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div id="footer__logoBlock">
+
+            <img src="images/logo/ohmyfood-white.png" alt="logo ohmyfood"></a>
+        </div>
+
+
+        <div id="footer__textBlock">
+            <h4>Proposer un restaurant <br>
+                Devenir partenaire <br>
+                Mentions légales <br>
+                Contact</h4>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
