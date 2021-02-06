@@ -8,6 +8,10 @@
     src: url("fonts/Roboto-Regular.ttf") format("truetype");
   }
   @font-face {
+    font-family: 'RobotoThin';
+    src: url("fonts/Roboto-Thin.ttf") format("truetype");
+  }
+  @font-face {
     font-family: 'RobotoLight';
     src: url("fonts/Roboto-Light.ttf") format("truetype");
   }
@@ -31,11 +35,13 @@
   }
   h1 {
     font-size: 7vw;
-    font-family: 'RobotoBold';
+    font-family: 'RobotoMedium';
+    font-weight: 500;
   }
   h2 {
     font-size: 6.5vw;
-    font-family: 'RobotoBold';
+    font-weight: 500;
+    font-family: 'RobotoMedium';
   }
   h3 {
     font-size: 5vw;
@@ -46,8 +52,15 @@
     font-size: 4.5vw;
     font-family: 'RobotoMedium';
   }
+  h5 {
+    font-size: 4.5vw;
+    font-family: 'RobotoLight';
+    font-weight: 100;
+    margin-bottom: -6%;
+  }
   span {
     font-size: 2.5vw;
+    font-family: 'RobotoThin';
   }
   p {
     font-size: 4.7vw;
@@ -90,8 +103,8 @@
     width: 100%;
     background-color: #ececec;
     margin-top: 5%;
-    -webkit-box-shadow: inset 0px 9px 8px -5px #9F9E9E;
-    box-shadow: inset 0px 9px 8px -5px #9F9E9E;
+    -webkit-box-shadow: inset 0px 9px 8px -5px #c6c6c6;
+    box-shadow: inset 0px 9px 8px -5px #c6c6c6;
   }
   #searchPart1__iconBlock {
     display: -webkit-box;
@@ -116,19 +129,19 @@
     padding: 2.5rem 0 0 2.5rem;
   }
   ::-webkit-input-placeholder {
-    color: #323232;
+    color: #474747;
     font-size: 5vw;
   }
   :-ms-input-placeholder {
-    color: #323232;
+    color: #474747;
     font-size: 5vw;
   }
   ::-ms-input-placeholder {
-    color: #323232;
+    color: #474747;
     font-size: 5vw;
   }
   ::placeholder {
-    color: #323232;
+    color: #474747;
     font-size: 5vw;
   }
   input {
@@ -190,8 +203,8 @@
     font-family: 'Roboto';
     font-weight: 400;
     border-radius: 60px;
-    -webkit-box-shadow: 2px 2px 6px #9F9E9E;
-            box-shadow: 2px 2px 6px #9F9E9E;
+    -webkit-box-shadow: 3px 3px 10px #939393;
+            box-shadow: 3px 3px 10px #939393;
     background: #FF79DB;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DB), to(#9456DC));
     background: linear-gradient(to bottom right, #FF79DB, #9456DC);
@@ -208,7 +221,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     margin: auto;
-    width: 90%;
+    width: 85%;
   }
   .functioning__entry {
     display: -webkit-box;
@@ -225,9 +238,9 @@
     height: 10%;
     background-color: #F9F9F9;
     border-radius: 50px;
-    margin: 1rem 0 1rem 0;
-    -webkit-box-shadow: 2px 2px 15px #dcdcdc;
-            box-shadow: 2px 2px 15px #dcdcdc;
+    margin: 1.5rem 0 1.5rem 0;
+    -webkit-box-shadow: 2px 10px 18px #e0e0e0;
+            box-shadow: 2px 10px 18px #e0e0e0;
   }
   .functioning__entry--numberBlock {
     background-color: #9356DC;
@@ -268,7 +281,7 @@
   }
   .functioning__entry--iconBlock--mobileIcon, .functioning__entry--iconBlock--listIcon, .functioning__entry--iconBlock--storeIcon {
     font-size: 3rem;
-    color: #9F9E9E;
+    color: #7a7a7a;
   }
   .functioning__entry--text {
     width: 80%;
@@ -290,7 +303,7 @@
     width: 100%;
     background-color: #F9F9F9;
     padding-bottom: 20%;
-    margin-top: 20%;
+    margin-top: 15%;
   }
   #restaurants__titleBlock {
     margin: 5em 0 0 3em;
@@ -317,8 +330,8 @@
             flex-direction: column;
     width: auto;
     height: 600px;
-    -webkit-box-shadow: 6px 5px 10px #dcdcdc;
-            box-shadow: 6px 5px 10px #dcdcdc;
+    -webkit-box-shadow: 6px 5px 10px #c6c6c6;
+            box-shadow: 6px 5px 10px #c6c6c6;
     border-radius: 50px;
     margin-top: 10%;
   }
@@ -328,7 +341,7 @@
   }
   .restaurants__cards--Tag {
     background-color: #99E2D0;
-    color: #148b6d;
+    color: #278870;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -392,18 +405,61 @@
     cursor: pointer;
   }
   #footer {
-    background-color: #323232;
+    background-color: #2d2d2d;
   }
   #footer__logoBlock {
     width: 85%;
     margin: auto;
     padding-top: 5%;
   }
-  #footer__textBlock {
+  #footer__logoBlock img {
+    width: 250px;
+  }
+  #footer__globalText {
     width: 85%;
     margin: auto;
     color: #FFFFFF;
-    padding-bottom: 5%;
+    padding-bottom: 15%;
+  }
+  #footer__textBlock1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: -5%;
+  }
+  #footer__textBlock1--ustensilsIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 2.5rem;
+    margin-right: 3%;
+    padding-top: 9%;
+  }
+  #footer__textBlock2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: -5%;
+  }
+  #footer__textBlock2--partnershipIcon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    font-size: 1.8rem;
+    margin-right: 3%;
+    padding-top: 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */

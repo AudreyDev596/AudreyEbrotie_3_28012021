@@ -10,6 +10,11 @@
     }
 
     @font-face {
+        font-family: 'RobotoThin';
+        src: url('fonts/Roboto-Thin.ttf') format('truetype');
+    }
+
+    @font-face {
         font-family: 'RobotoLight';
         src: url('fonts/Roboto-Light.ttf') format('truetype');
     }
@@ -37,24 +42,21 @@
     }
 
     $white: #FFFFFF;
-    $lightgrey: #ececec;
-    $lightergrey: #F9F9F9;
-    $darkgrey: #9F9E9E;
-    $grey: #dcdcdc;
-    $darkergrey: #323232;
+    $lightgrey: #F9F9F9;
     $pink : #FF79DA;
     $purple: #9356DC;
     $mintgreen: #99E2D0;
-    $darkmintgreen : #148b6d;
 
     h1 {
         font-size: 7vw;
-        font-family: 'RobotoBold';
+        font-family: 'RobotoMedium';
+        font-weight: 500;
     }
 
     h2 {
         font-size: 6.5vw;
-        font-family: 'RobotoBold';
+        font-weight: 500;
+        font-family: 'RobotoMedium';
     }
 
     h3 {
@@ -68,8 +70,16 @@
         font-family: 'RobotoMedium';
     }
 
+    h5 {
+        font-size: 4.5vw;
+        font-family: 'RobotoLight';
+        font-weight: 100;
+        margin-bottom: -6%;
+    }
+
     span {
         font-size: 2.5vw;
+        font-family: 'RobotoThin';
     }
 
     p {
@@ -109,11 +119,11 @@
         display: flex;
         flex-direction: row;
         width: 100%;
-        background-color: $lightgrey;
+        background-color: darken($lightgrey, 5%);
         margin-top: 5%;
-        -webkit-box-shadow: inset 0px 9px 8px -5px $darkgrey;
-        -moz-box-shadow: inset 0px 9px 8px -5px $darkgrey;
-        box-shadow: inset 0px 9px 8px -5px $darkgrey;
+        -webkit-box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
+        -moz-box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
+        box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
 
         &__iconBlock {
             display: flex;
@@ -136,7 +146,7 @@
     }
 
     ::placeholder {
-        color: $darkergrey;
+        color: darken($lightgrey, 70%);
         font-size: 5vw;
     }
 
@@ -152,7 +162,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background-color: $lightergrey;
+        background-color: $lightgrey;
 
         &__titleBlock {
             text-align: center;
@@ -185,7 +195,7 @@
                 font-family: 'Roboto';
                 font-weight: 400;
                 border-radius: 60px;
-                box-shadow: 2px 2px 6px $darkgrey;
+                box-shadow: 3px 3px 10px darken($lightgrey, 40%);
                 background: #FF79DB;
                 background: -webkit-linear-gradient(top left, #FF79DB, #9456DC);
                 background: -moz-linear-gradient(top left, #FF79DB, #9456DC);
@@ -204,7 +214,7 @@
         display: flex;
         flex-direction: column;
         margin: auto;
-        width: 90%;
+        width: 85%;
     }
 
     .functioning__entry {
@@ -213,10 +223,10 @@
         align-items: center;
         width: 100%;
         height: 10%;
-        background-color: $lightergrey;
+        background-color: $lightgrey;
         border-radius: 50px;
-        margin: 1rem 0 1rem 0;
-        box-shadow: 2px 2px 15px $grey;
+        margin: 1.5rem 0 1.5rem 0;
+        box-shadow: 2px 10px 18px darken($lightgrey, 10%);
 
         &--numberBlock {
             background-color: $purple;
@@ -246,7 +256,7 @@
             &--listIcon,
             &--storeIcon {
                 font-size: 3rem;
-                color: $darkgrey;
+                color: darken($lightgrey, 50%);
             }
         }
 
@@ -269,9 +279,9 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        background-color: $lightergrey;
+        background-color: $lightgrey;
         padding-bottom: 20%;
-        margin-top: 20%;
+        margin-top: 15%;
     }
 
     #restaurants__titleBlock {
@@ -291,7 +301,7 @@
         flex-direction: column;
         width: auto;
         height: 600px;
-        box-shadow: 6px 5px 10px $grey;
+        box-shadow: 6px 5px 10px darken($lightgrey, 20%);
         border-radius: 50px;
         margin-top: 10%;
 
@@ -302,7 +312,7 @@
 
         &--Tag {
             background-color: $mintgreen;
-            color: $darkmintgreen;
+            color: darken($mintgreen, 40%);
             display: flex;
             position: absolute;
             display: flex;
@@ -355,20 +365,56 @@
     // <!-- Footer -->
 
     #footer {
-        background-color: $darkergrey;
+        background-color: darken($lightgrey, 80%);
     }
 
     #footer__logoBlock {
         width: 85%;
         margin: auto;
         padding-top: 5%;
+
+        img {
+            width: 250px;
+        }
     }
 
-    #footer__textBlock {
+    #footer__globalText {
         width: 85%;
         margin: auto;
         color: $white;
-        padding-bottom: 5%;
+        padding-bottom: 15%;
     }
+
+    #footer__textBlock1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -5%;
+
+        &--ustensilsIcon {
+            display: flex;
+            align-self: flex-end;
+            font-size: 2.5rem;
+            margin-right: 3%;
+            padding-top: 9%;
+        }
+
+    }
+
+    #footer__textBlock2 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -5%;
+
+        &--partnershipIcon {
+            display: flex;
+            align-self: flex-end;
+            font-size: 1.8rem;
+            margin-right: 3%;
+            padding-top: 10%;
+        }
+
+    }
+
+
 
 }
