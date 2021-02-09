@@ -1,0 +1,56 @@
+    // <!-- Footer -->
+
+    footer {
+        background-color: darken($lightgrey, 80%);
+    }
+
+    #footer__logoBlock {
+        width: 85%;
+        margin: auto;
+        padding-top: 5%;
+
+        img {
+            width: 250px;
+        }
+    }
+
+    #footer__globalText {
+        width: 85%;
+        margin: auto;
+        color: $white;
+        padding-bottom: 15%;
+    }
+
+    #footer__textBlock1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -5%;
+
+        &--ustensilsIcon {
+            display: flex;
+            align-self: flex-end;
+            font-size: 2.2rem;
+            margin-right: 3%;
+            padding-bottom: 7px;
+        }
+
+    }
+
+    #footer__textBlock2 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: -5%;
+
+        &--partnershipIcon {
+            display: flex;
+            align-self: flex-end;
+            font-size: 1.8rem;
+            margin-right: 3%;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    #footer__legalNotice {
+        margin-bottom: -45px;
+    }

@@ -1,11 +1,84 @@
 @media screen and (min-width: 375px) {
+
+    // ********************** Importes scss **************************
+
+    @import "./utils/variables";
+    @import "./layout/form";
+    @import "./layout/header";
+    @import "./layout/footer";
+
+    // ********************** Mixins **************************
+
+    @mixin bg-globalBlock($blockRadius : 80px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: $lightgrey;
+        padding-bottom: 20%;
+        border-top-left-radius: $blockRadius;
+        border-top-right-radius: $blockRadius;
+        margin-top: -135px;
+        opacity: 0.99;
+    }
+
+    @mixin menu-title {
+        width: 90%;
+        margin: auto;
+        margin-top: -50px;
+        margin-bottom: -150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @mixin menu-titleStyle {
+        font-family: 'Shrikhand';
+        font-size: 7rem;
+        width: 85%;
+    }
+
+    @mixin menu-heartIconStyle($color: $lightgrey) {
+        font-size: 4rem;
+        color: $color;
+        text-shadow: 0px 0px 4px black;
+    }
+
+    @mixin gradient-button-block {
+        width: 50%;
+        margin: auto;
+        margin-top: 130px;
+        height: 8rem;
+    }
+
+    @mixin gradient-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: $white;
+        font-size: 2.8rem;
+        font-family: 'RobotoRegular';
+        font-weight: 200;
+        border-radius: 60px;
+        box-shadow: 3px 3px 10px darken($lightgrey, 40%);
+        background: #FF79DB;
+        background: -webkit-linear-gradient(top left, #FF79DB, #9456DC);
+        background: -moz-linear-gradient(top left, #FF79DB, #9456DC);
+        background: linear-gradient(to bottom right, #FF79DB, #9456DC);
+    }
+
+
+    // ********************** Fonts **************************
+
     @font-face {
         font-family: 'Shrikhand';
         src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
     }
 
     @font-face {
-        font-family: 'Roboto';
+        font-family: 'RobotoRegular';
         src: url('fonts/Roboto-Regular.ttf') format('truetype');
     }
 
@@ -29,6 +102,8 @@
         src: url('fonts/Roboto-Medium.ttf') format('truetype');
     }
 
+    // ********************** Paramétres body, textes **************************
+
     body,
     html {
         max-width: 100%;
@@ -41,50 +116,57 @@
         margin: auto;
     }
 
-    $white: #FFFFFF;
-    $lightgrey: #F9F9F9;
-    $pink : #FF79DA;
-    $purple: #9356DC;
-    $mintgreen: #99E2D0;
-
     h1 {
-        font-size: 7vw;
+        font-size: 4.5rem;
         font-family: 'RobotoMedium';
         font-weight: 500;
     }
 
     h2 {
-        font-size: 6.5vw;
+        font-size: 4.1rem;
         font-weight: 500;
         font-family: 'RobotoMedium';
     }
 
+    .h2-menus {
+        font-family: 'RobotoThin';
+        text-transform: uppercase;
+        font-size: 2.3rem;
+    }
+
     h3 {
-        font-size: 5vw;
-        font-family: 'RobotoBold';
-        margin-bottom: -8%;
-    }
-
-    h4 {
-        font-size: 4.5vw;
+        font-size: 2.7rem;
         font-family: 'RobotoMedium';
-    }
-
-    h5 {
-        font-size: 4.5vw;
-        font-family: 'RobotoLight';
-        font-weight: 100;
         margin-bottom: -6%;
     }
 
+    h4 {
+        font-size: 2.4rem;
+        font-family: 'RobotoMedium';
+        font-weight: 100;
+    }
+
+    h5 {
+        font-size: 2.5rem;
+        font-family: 'RobotoLight';
+        font-weight: 100;
+        margin-bottom: 0;
+    }
+
     span {
-        font-size: 2.5vw;
+        font-size: 1.8rem;
         font-family: 'RobotoThin';
     }
 
     p {
-        font-size: 4.7vw;
+        font-size: 2.5rem;
         font-family: 'RobotoLight';
+    }
+
+    .h4-meal-details {
+        font-family: 'RobotoThin';
+        font-size: 2.3rem;
+        margin-top: 60px;
     }
 
     a {
@@ -92,119 +174,9 @@
         color: black;
     }
 
-    // <!-- Header : logo -->
-
-    #header__logoBlock {
-        width: 80%;
-        margin: auto;
-        margin-top: 5%;
-        display: flex;
-        justify-content: center;
 
 
-        &--logo {
-            display: flex;
-            justify-content: center;
-
-
-            img {
-                width: 35rem;
-            }
-        }
-    }
-
-    // <!-- Recherche : formulaire -->
-
-    #searchPart1 {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        background-color: darken($lightgrey, 5%);
-        margin-top: 5%;
-        -webkit-box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
-        -moz-box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
-        box-shadow: inset 0px 9px 8px -5px darken($lightgrey, 20%);
-
-        &__iconBlock {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 28%;
-            font-size: 4.5vw;
-            margin-right: 1rem;
-            padding-bottom: 0.5rem;
-
-            &--icon {
-                width: 2.5rem;
-            }
-        }
-
-        &__textBlock {
-            width: 72%;
-            padding: 2.5rem 0 0 2.5rem;
-        }
-    }
-
-    ::placeholder {
-        color: darken($lightgrey, 70%);
-        font-size: 5vw;
-    }
-
-    input {
-        background-color: transparent;
-        border-style: none;
-        height: 8rem;
-        margin-left: 0.5rem;
-    }
-
-    #searchPart2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: $lightgrey;
-
-        &__titleBlock {
-            text-align: center;
-            width: 75%;
-            margin: 5% 0 -2% 0;
-        }
-
-        &__subtitleBlock {
-            text-align: center;
-            width: 89%;
-            margin-bottom: 8rem;
-        }
-
-        &__buttonBlock {
-            display: flex;
-            align-items: center;
-            margin-top: -5%;
-            width: 65%;
-            height: 8rem;
-            margin-bottom: 10rem;
-
-            &--button {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100%;
-                width: 100%;
-                color: $white;
-                font-size: 4.7vw;
-                font-family: 'Roboto';
-                font-weight: 400;
-                border-radius: 60px;
-                box-shadow: 3px 3px 10px darken($lightgrey, 40%);
-                background: #FF79DB;
-                background: -webkit-linear-gradient(top left, #FF79DB, #9456DC);
-                background: -moz-linear-gradient(top left, #FF79DB, #9456DC);
-                background: linear-gradient(to bottom right, #FF79DB, #9456DC);
-            }
-        }
-    }
-
-    // <!-- Fonctionnement / functioning -->
+    // ********************** Page index : Fonctionnement / functioning **************************
 
     #functioning__titleBlock {
         margin: 5em 0 4em 3em;
@@ -215,6 +187,7 @@
         flex-direction: column;
         margin: auto;
         width: 85%;
+        margin-bottom: 15rem;
     }
 
     .functioning__entry {
@@ -273,15 +246,12 @@
         color: $purple;
     }
 
-    // <!-- Restaurants -->
+    // ********************** Page index : Restaurants **************************
 
     #restaurants__globalBlock {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: $lightgrey;
-        padding-bottom: 20%;
-        margin-top: 15%;
+        @include bg-globalBlock;
+        border-radius: 0px;
+
     }
 
     #restaurants__titleBlock {
@@ -319,8 +289,8 @@
             flex-direction: row;
             align-self: flex-end;
             margin: 4%;
-            width: 25%;
-            height: 6%;
+            width: 20%;
+            height: 5%;
             justify-content: center;
             align-items: center;
         }
@@ -337,84 +307,121 @@
             border-bottom-right-radius: 50px;
 
             &--text {
-                width: 80%;
+                width: 85%;
                 margin-left: 5%;
             }
 
             &--icon {
                 display: flex;
-                justify-content: center;
+
                 align-items: center;
-                width: 20%;
                 height: auto;
+                width: 15%;
                 margin-bottom: 3%;
             }
 
-            &--icon--heartIcon {
-                font-size: 4rem;
-
-                &:hover {
-                    color: $purple;
-                    cursor: pointer;
-                }
-            }
-
         }
     }
 
-    // <!-- Footer -->
-
-    #footer {
-        background-color: darken($lightgrey, 80%);
+    .heartIcon {
+        @include menu-heartIconStyle;
+        color: white;
     }
 
-    #footer__logoBlock {
-        width: 85%;
-        margin: auto;
-        padding-top: 5%;
+    .heartIcon:hover,
+    .heartIcon:active,
+    .heartIcon-menu:hover,
+    .heartIcon-menu:active {
+        animation: heart-anim 1s ease-in-out 1;
+        animation-fill-mode: forwards;
+        cursor: pointer;
 
-        img {
-            width: 250px;
+    }
+
+    @keyframes heart-anim {
+        from {
+            color: white;
+            text-shadow: 0 0 3px #000;
+        }
+
+        to {
+            text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+            color: transparent;
+            background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            color: transparent;
         }
     }
 
-    #footer__globalText {
-        width: 85%;
-        margin: auto;
-        color: $white;
-        padding-bottom: 15%;
+
+    // ********************** Pages menus **************************
+
+    #menu__globalBlock {
+        @include bg-globalBlock($blockRadius: 80px);
     }
 
-    #footer__textBlock1 {
+    #menu__titleBlock {
+        @include menu-title;
+
+        &--text {
+            @include menu-titleStyle;
+        }
+
+        &--icon {
+            @include menu-heartIconStyle($color: $lightgrey);
+            margin-right: 30px;
+        }
+    }
+
+    .title__mealStep {
+        width: 90%;
+        margin: auto;
+        margin-top: 60px;
+    }
+
+    .mint-border {
+        width: 9%;
+        border-top: solid 6px $mintgreen;
+        margin-left: 50px;
+        margin-top: -20px;
+    }
+
+    .meal__entryGlobal {
+        width: 90%;
+        margin: auto;
+    }
+
+    .meal__entry {
         display: flex;
         flex-direction: row;
-        margin-bottom: -5%;
+        width: 100%;
+        background-color: $white;
+        border-radius: 30px;
+        box-shadow: 2px 10px 20px darken($lightgrey, 10%);
+        margin-top: 40px;
 
-        &--ustensilsIcon {
-            display: flex;
-            align-self: flex-end;
-            font-size: 2.5rem;
-            margin-right: 3%;
-            padding-top: 9%;
+        &--text {
+            width: 75%;
+            margin-left: 30px;
         }
 
-    }
-
-    #footer__textBlock2 {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: -5%;
-
-        &--partnershipIcon {
+        &--price {
+            width: 25%;
             display: flex;
-            align-self: flex-end;
-            font-size: 1.8rem;
-            margin-right: 3%;
-            padding-top: 10%;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 55px;
         }
-
     }
 
+    #order__buttonBlock {
+        @include gradient-button-block;
+
+        &--button {
+            @include gradient-button;
+        }
+    }
 
 
 }

@@ -12,7 +12,8 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 <body>
-    <main>
+    <header>
+
         <!-- Header : logo -->
 
         <div id="header__logoBlock">
@@ -20,31 +21,35 @@
                     alt="logo ohmyfood"></a>
         </div>
 
+    </header>
+
+    <main>
+
         <!-- Recherche : formulaire -->
 
-        <div id="searchPart1">
-            <div id="searchPart1__iconBlock">
-                <svg id="searchPart1__iconBlock--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <div id="searchForm-input">
+            <div id="searchForm-input__iconBlock">
+                <svg id="searchForm-input__iconBlock--icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                     <path style="fill: rgb(55, 55, 55)"
                         d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
                 </svg>
             </div>
-            <div id="searchPart1__textBlock">
+            <div id="searchForm-input__textBlock">
                 <input type="text" id="ville" name="ville" required minlength="2" maxlength="30" size="60"
                     placeholder="Paris, Belleville" />
             </div>
         </div>
 
-        <div id="searchPart2">
-            <div id="searchPart2__titleBlock">
+        <div id="searchForm-titles-button">
+            <div id="searchForm-titles-button__titleBlock">
                 <h1>Réservez le menu qui vous convient</h1>
             </div>
-            <div id="searchPart2__subtitleBlock">
+            <div id="searchForm-titles-button__subtitleBlock">
                 <span>Découvrez des restaurants d'exception, sélectionnés par nos soins.</span>
             </div>
 
-            <div id="searchPart2__buttonBlock">
-                <a id="searchPart2__buttonBlock--button" href="#">Explorer nos restaurants</a>
+            <div id="searchForm-titles-button__buttonBlock">
+                <a id="searchForm-titles-button__buttonBlock--button" href="#">Explorer nos restaurants</a>
 
             </div>
 
@@ -121,70 +126,75 @@
 
             <div id="restaurants__underBlock">
 
-                <div class="restaurants__cards">
-                    <img src="images/restaurants/palette-du-gout.jpg" alt="photo restaurant La palette du goût">
 
-                    <div class="restaurants__cards--Tag">
-                        <h4>Nouveau</h4>
-                    </div>
+                <a href="./pages/menu-lapalettedugout.html">
+                    <div class="restaurants__cards">
+                        <img src="images/restaurants/palette-du-gout.jpg" alt="photo restaurant La palette du goût">
 
-                    <div class="restaurants__cards--Banner">
-                        <div class="restaurants__cards--Banner--text">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
+                        <div class="restaurants__cards--Tag">
+                            <h4>Nouveau</h4>
                         </div>
 
-                        <div class="restaurants__cards--Banner--icon">
-                            <div class="restaurants__cards--Banner--icon--heartIcon">
-                                <i class="fal fa-heart"></i>
+                        <div class="restaurants__cards--Banner">
+                            <div class="restaurants__cards--Banner--text">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
 
+                            <div class="restaurants__cards--Banner--icon">
+                                <div class="heartIcon">
+                                    <i class="fas fa-heart"></i>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
+                <!-- ************************************************* -->
+                <a href="./pages/menu-lanoteenchantee.html">
+                    <div class="restaurants__cards">
+                        <img src="images/restaurants/redim/note-enchantee.jpg" alt="photo restaurant La note enchantée">
+
+                        <div class="restaurants__cards--Tag">
+                            <h4>Nouveau</h4>
+                        </div>
+
+                        <div class="restaurants__cards--Banner">
+                            <div class="restaurants__cards--Banner--text">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+
+                            <div class="restaurants__cards--Banner--icon">
+                                <div class="heartIcon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
 
                 <!-- ************************************************* -->
 
                 <div class="restaurants__cards">
-                    <img src="images/restaurants/redim/note-enchantee.jpg" alt="photo restaurant La note enchantée">
+                    <a href="./pages/menu-alafrancaise.html"><img src="images/restaurants/a-la-francaise.jpg"
+                            alt="photo restaurant A la française">
 
-                    <div class="restaurants__cards--Tag">
-                        <h4>Nouveau</h4>
-                    </div>
+                        <div class="restaurants__cards--Banner">
+                            <div class="restaurants__cards--Banner--text">
+                                <h3>A la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
 
-                    <div class="restaurants__cards--Banner">
-                        <div class="restaurants__cards--Banner--text">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
-                        </div>
-
-                        <div class="restaurants__cards--Banner--icon">
-                            <div class="restaurants__cards--Banner--icon--heartIcon">
-                                <i class="fal fa-heart"></i>
+                            <div class="restaurants__cards--Banner--icon">
+                                <div class="heartIcon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-
-                <!-- ************************************************* -->
-
-                <div class="restaurants__cards">
-                    <img src="images/restaurants/a-la-francaise.jpg" alt="photo restaurant A la française">
-
-                    <div class="restaurants__cards--Banner">
-                        <div class="restaurants__cards--Banner--text">
-                            <h3>A la française</h3>
-                            <p>Cité Rouge</p>
-                        </div>
-
-                        <div class="restaurants__cards--Banner--icon">
-                            <div class="restaurants__cards--Banner--icon--heartIcon">
-                                <i class="fal fa-heart"></i>
-                            </div>
-                        </div>
-                    </div>
-
+                    </a>
                 </div>
 
                 <!-- ************************************************* -->
@@ -199,8 +209,8 @@
                         </div>
 
                         <div class="restaurants__cards--Banner--icon">
-                            <div class="restaurants__cards--Banner--icon--heartIcon">
-                                <i class="fal fa-heart"></i>
+                            <div class="heartIcon">
+                                <i class="fas fa-heart"></i>
                             </div>
                         </div>
                     </div>
@@ -215,7 +225,7 @@
     </main>
 
     <!-- Footer -->
-    <div id="footer">
+    <footer>
         <div id="footer__logoBlock">
 
             <img src="images/logo/ohmyfood-white.png" alt="logo ohmyfood"></a>
@@ -254,7 +264,7 @@
 
         </div>
 
-    </div>
+    </footer>
 
 
 

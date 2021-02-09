@@ -1,0 +1,29 @@
+    // <!-- Header : logo -->
+
+    #header__logoBlock {
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+
+
+        &--logo {
+            display: flex;
+            justify-content: center;
+
+
+            img {
+                width: 35rem;
+            }
+        }
+    }
+
+    #image__header {
+        width: 100%;
+        margin-top: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
