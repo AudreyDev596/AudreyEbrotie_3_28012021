@@ -35,14 +35,14 @@
   ::placeholder {
       color: darken($lightgrey, 70%);
       font-size: 2.8rem;
-      height: 100%;
+      height: 130%;
   }
 
   input {
       background-color: transparent;
       border-style: none;
       height: 5.5rem;
-      margin-left: 0.5rem;
+      margin-left: 1rem;
       height: 100%;
   }
 
@@ -61,7 +61,7 @@
 
       &__subtitleBlock {
           text-align: center;
-          width: 89%;
+          width: 92%;
           margin-bottom: 8rem;
       }
 
