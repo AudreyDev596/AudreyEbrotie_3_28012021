@@ -1,6 +1,6 @@
 @media screen and (min-width: 375px) {
 
-    // ********************** Importes scss **************************
+    // ********************** Imports scss **************************
 
     @import "./utils/variables";
     @import "./layout/form";
@@ -74,35 +74,35 @@
 
     @font-face {
         font-family: 'Shrikhand';
-        src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
+        src: url('./fonts/Shrikhand-Regular.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'RobotoRegular';
-        src: url('fonts/Roboto-Regular.ttf') format('truetype');
+        src: url('./fonts/Roboto-Regular.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'RobotoThin';
-        src: url('fonts/Roboto-Thin.ttf') format('truetype');
+        src: url('./fonts/Roboto-Thin.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'RobotoLight';
-        src: url('fonts/Roboto-Light.ttf') format('truetype');
+        src: url('./fonts/Roboto-Light.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'RobotoBold';
-        src: url('fonts/Roboto-Bold.ttf') format('truetype');
+        src: url('./fonts/Roboto-Bold.ttf') format('truetype');
     }
 
     @font-face {
         font-family: 'RobotoMedium';
-        src: url('fonts/Roboto-Medium.ttf') format('truetype');
+        src: url('./fonts/Roboto-Medium.ttf') format('truetype');
     }
 
-    // ********************** Paramétres body, textes **************************
+    // ********************** Paramètres body, textes **************************
 
     body,
     html {
