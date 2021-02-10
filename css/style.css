@@ -142,14 +142,48 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #header__logoBlock--logo img {
-    width: 35rem;
+  #header__logoBlock-menus {
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  #image__header {
+  #header__logoBlock-menus--logo {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #header__logoBlock-menus--returnIcon {
+    width: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  i.fas.fa-arrow-left {
+    font-size: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: flex-start;
+  }
+  #image__header-menus {
     width: 100%;
     margin-top: 40px;
   }
-  #image__header img {
+  #image__header-menus img {
     width: 100%;
   }
   footer {
@@ -212,29 +246,179 @@
   #footer__legalNotice {
     margin-bottom: -45px;
   }
+  .preloader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    opacity: 0.6;
+    overflow: hidden;
+    z-index: 3;
+    -webkit-animation-name: loading;
+    animation-name: loading;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+  }
+  .loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: #9356DC;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  .loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: #FF79DA;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: #99E2D0;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes loading {
+    0% {
+      height: 100%;
+    }
+    99% {
+      height: 100%;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  @keyframes loading {
+    0% {
+      height: 100%;
+    }
+    99% {
+      height: 100%;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  @-webkit-keyframes heart-anim {
+    from {
+      color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+      -webkit-text-fill-color: transparent;
+      background-size: 100%;
+    }
+    to {
+      -webkit-text-stroke: initial;
+      color: transparent;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+      background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+      background-size: 100%;
+      -webkit-background-clip: text;
+    }
+  }
+  @keyframes heart-anim {
+    from {
+      color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+      -webkit-text-fill-color: transparent;
+      background-size: 100%;
+    }
+    to {
+      -webkit-text-stroke: initial;
+      color: transparent;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+      background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+      background-size: 100%;
+      -webkit-background-clip: text;
+    }
+  }
+  @-webkit-keyframes apparition-menu {
+    0% {
+      margin-top: -600px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes apparition-menu {
+    0% {
+      margin-top: -600px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
   @font-face {
     font-family: 'Shrikhand';
-    src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+    src: url("/fonts/Shrikhand-Regular.ttf") format("truetype");
   }
   @font-face {
     font-family: 'RobotoRegular';
-    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+    src: url("/fonts/Roboto-Regular.ttf") format("truetype");
   }
   @font-face {
     font-family: 'RobotoThin';
-    src: url("../fonts/Roboto-Thin.ttf") format("truetype");
+    src: url("/fonts/Roboto-Thin.ttf") format("truetype");
   }
   @font-face {
     font-family: 'RobotoLight';
-    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+    src: url("/fonts/Roboto-Light.ttf") format("truetype");
   }
   @font-face {
     font-family: 'RobotoBold';
-    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+    src: url("/fonts/Roboto-Bold.ttf") format("truetype");
   }
   @font-face {
     font-family: 'RobotoMedium';
-    src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+    src: url("/fonts/Roboto-Medium.ttf") format("truetype");
   }
   body,
   html {
@@ -307,7 +491,7 @@
             flex-direction: column;
     margin: auto;
     width: 85%;
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
   }
   .functioning__entry {
     display: -webkit-box;
@@ -408,7 +592,7 @@
             flex-direction: column;
     margin: auto;
     width: 85%;
-    margin-top: -5%;
+    overflow: hidden;
   }
   .restaurants__cards {
     display: -webkit-box;
@@ -419,11 +603,11 @@
         -ms-flex-direction: column;
             flex-direction: column;
     width: auto;
-    height: 600px;
-    -webkit-box-shadow: 6px 5px 10px #c6c6c6;
-            box-shadow: 6px 5px 10px #c6c6c6;
+    height: 570px;
+    -webkit-box-shadow: 8px 8px 15px #c6c6c6;
+            box-shadow: 8px 8px 15px #c6c6c6;
     border-radius: 50px;
-    margin-top: 10%;
+    margin-top: 100px;
   }
   .restaurants__cards img {
     width: 100%;
@@ -443,9 +627,9 @@
             flex-direction: row;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 4%;
-    width: 20%;
-    height: 5%;
+    margin: 40px;
+    width: 200px;
+    height: 80px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -456,7 +640,7 @@
   .restaurants__cards--Banner {
     background-color: #FFFFFF;
     width: 100%;
-    height: 35%;
+    height: 170px;
     margin-top: -20%;
     opacity: 0.99;
     display: -webkit-box;
@@ -487,48 +671,18 @@
   .heartIcon {
     font-size: 4rem;
     color: #F9F9F9;
-    text-shadow: 0px 0px 4px black;
+    -webkit-text-stroke: 2px black;
     color: white;
   }
   .heartIcon:hover,
   .heartIcon:active,
   .heartIcon-menu:hover,
   .heartIcon-menu:active {
-    -webkit-animation: heart-anim 1s ease-in-out 1;
-            animation: heart-anim 1s ease-in-out 1;
+    -webkit-animation: heart-anim 2s ease-in-out;
+            animation: heart-anim 2s ease-in-out;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
     cursor: pointer;
-  }
-  @-webkit-keyframes heart-anim {
-    from {
-      color: white;
-      text-shadow: 0 0 3px #000;
-    }
-    to {
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-      color: transparent;
-      background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-      background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-  }
-  @keyframes heart-anim {
-    from {
-      color: white;
-      text-shadow: 0 0 3px #000;
-    }
-    to {
-      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-      color: transparent;
-      background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-      background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-      background-size: 100%;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
   }
   #menu__globalBlock {
     display: -webkit-box;
@@ -573,7 +727,7 @@
   #menu__titleBlock--icon {
     font-size: 4rem;
     color: #F9F9F9;
-    text-shadow: 0px 0px 4px black;
+    -webkit-text-stroke: 2px black;
     margin-right: 30px;
   }
   .title__mealStep {
@@ -590,6 +744,8 @@
   .meal__entryGlobal {
     width: 90%;
     margin: auto;
+    -webkit-animation: 1.5s apparition-menu;
+            animation: 1.5s apparition-menu;
   }
   .meal__entry {
     display: -webkit-box;
@@ -607,11 +763,14 @@
     margin-top: 40px;
   }
   .meal__entry--text {
-    width: 75%;
+    width: 80%;
     margin-left: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .meal__entry--price {
-    width: 25%;
+    width: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -652,6 +811,42 @@
     background: #FF79DB;
     background: -webkit-gradient(linear, left top, right bottom, from(#FF79DB), to(#9456DC));
     background: linear-gradient(to bottom right, #FF79DB, #9456DC);
+  }
+  .meal__entry:hover .check__block {
+    width: 250px;
+    height: auto;
+    font-size: 5rem;
+    cursor: pointer;
+  }
+  .meal__entry:hover .check__block:active {
+    background-color: #9356DC;
+  }
+  .meal__entry:hover i.fas.fa-check-circle {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .check__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 0%;
+    font-size: 5rem;
+    height: auto;
+    overflow: hidden;
+    color: white;
+    background-color: #99E2D0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-transition: width 0.4s;
+    transition: width 0.4s;
   }
 }
 /*# sourceMappingURL=style.css.map */
