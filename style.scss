@@ -1,191 +1,586 @@
-@media screen and (min-width: 375px) {
+// ********************** Imports scss **************************
 
+@import "./utils/variables";
+@import "./base/fonts";
+@import "./layout/form";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./composants/button";
+@import "./composants/loading-spinner";
 
-    // ********************** Imports scss **************************
+// ********************** Mixins **************************
 
-    @import "./utils/variables";
-    @import "./base/fonts";
-    @import "./layout/form";
-    @import "./layout/header";
-    @import "./layout/footer";
-    @import "./composants/button";
-    @import "./composants/loading-spinner";
+@mixin bg-globalBlock($blockRadius : 80px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $lightgrey;
+    padding-bottom: 20%;
+    border-top-left-radius: $blockRadius;
+    border-top-right-radius: $blockRadius;
+    margin-top: -135px;
+    opacity: 0.99;
+}
 
-    // ********************** Mixins **************************
+@mixin menu-title {
+    width: 90%;
+    margin: auto;
+    margin-top: -50px;
+    margin-bottom: -150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    @mixin bg-globalBlock($blockRadius : 80px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: $lightgrey;
-        padding-bottom: 20%;
-        border-top-left-radius: $blockRadius;
-        border-top-right-radius: $blockRadius;
-        margin-top: -135px;
-        opacity: 0.99;
+@mixin menu-titleStyle {
+    font-family: 'Shrikhand';
+    font-size: 7rem;
+    width: 85%;
+}
+
+@mixin menu-heartIconStyle($color: $lightgrey) {
+    font-size: 4rem;
+    color: $color;
+    -webkit-text-stroke: 2px black;
+}
+
+@mixin meal-entry {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: 2px 10px 20px darken($lightgrey, 10%);
+    margin-top: 40px;
+
+    &--text {
+        width: 80%;
+        margin-left: 30px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
-    @mixin menu-title {
-        width: 90%;
-        margin: auto;
-        margin-top: -50px;
-        margin-bottom: -150px;
+    &--price {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 55px;
+    }
+}
+
+// ********************** Propriétés body, textes **************************
+
+body,
+html {
+    max-width: 100%;
+    margin: auto;
+    font-family: 'RobotoLight';
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-family: 'RobotoMedium';
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.1rem;
+    font-weight: 500;
+    font-family: 'RobotoMedium';
+}
+
+.h2-subtitle-index {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: 'Robotolight';
+}
+
+.h2-menus {
+    font-family: 'RobotoThin';
+    text-transform: uppercase;
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 2.7rem;
+    font-family: 'RobotoMedium';
+    margin-bottom: -6%;
+}
+
+h4 {
+    font-size: 2.4rem;
+    font-family: 'RobotoMedium';
+    font-weight: 100;
+}
+
+.h4-meal-details {
+    font-family: 'RobotoThin';
+    font-size: 2.3rem;
+    margin-top: 60px;
+}
+
+h5 {
+    font-size: 2.5rem;
+    font-family: 'RobotoLight';
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+span {
+    font-size: 2rem;
+    font-family: 'RobotoThin';
+}
+
+p {
+    font-size: 2.5rem;
+    font-family: 'RobotoLight';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+// ********************** Page index : Fonctionnement / functioning **************************
+
+#functioning__titleBlock {
+    margin: 5em 0 4em 0;
+}
+
+#functioning__globalBlock {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+    margin-bottom: 20rem;
+}
+
+.functioning__entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: $lightgrey;
+    border-radius: 50px;
+    margin: 1.5rem 0 1.5rem 0;
+    box-shadow: 2px 10px 18px darken($lightgrey, 10%);
+
+    &--numberBlock {
+        background-color: $purple;
+        width: 6%;
+        height: 5%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        margin-left: -1.5rem;
+
+        &--number {
+            color: $white;
+            display: flex;
+            font-size: 2rem;
+            margin: 8% 8%;
+        }
+    }
+
+    &--iconBlock {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &--mobileIcon,
+        &--listIcon,
+        &--storeIcon {
+            font-size: 3rem;
+            color: darken($lightgrey, 50%);
+        }
+    }
+
+    &--text {
+        width: 80%;
+    }
+}
+
+.current .functioning__entry {
+    background-color: rgba(147, 86, 220, 0.2)
+}
+
+.current .functioning__entry--iconBlock--storeIcon {
+    color: $purple;
+}
+
+// ********************** Page index : Restaurants **************************
+
+#restaurants__globalBlock {
+    @include bg-globalBlock;
+    border-radius: 0px;
+}
+
+#restaurants__titleBlock {
+    margin: 5em 0 0 3em;
+}
+
+#restaurants__underBlock {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+}
+
+.restaurants__cards {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 550px;
+    box-shadow: 6px 6px 10px darken($lightgrey, 20%);
+    border-radius: 50px;
+    margin-top: 100px;
+
+    img {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    &--Tag {
+        background-color: $mintgreen;
+        color: darken($mintgreen, 40%);
+        display: flex;
+        position: absolute;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        align-self: flex-end;
+        margin: 40px;
+        width: 200px;
+        height: 80px;
+        justify-content: center;
         align-items: center;
     }
 
-    @mixin menu-titleStyle {
-        font-family: 'Shrikhand';
-        font-size: 7rem;
-        width: 85%;
-    }
-
-    @mixin menu-heartIconStyle($color: $lightgrey) {
-        font-size: 4rem;
-        color: $color;
-        -webkit-text-stroke: 2px black;
-    }
-
-    @mixin meal-entry {
+    &--Banner {
+        background-color: $white;
+        width: 100%;
+        height: 175px;
+        margin-top: -20%;
+        opacity: 0.99;
         display: flex;
         flex-direction: row;
-        width: 100%;
-        background-color: $white;
-        border-radius: 30px;
-        box-shadow: 2px 10px 20px darken($lightgrey, 10%);
-        margin-top: 40px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 6px 6px 10px darken($lightgrey, 20%);
 
         &--text {
-            width: 80%;
-            margin-left: 30px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+            width: 85%;
+            margin-left: 5%;
         }
 
-        &--price {
-            width: 20%;
+        &--icon {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding-top: 55px;
+            height: auto;
+            width: 15%;
+            margin-bottom: 3%;
         }
+
+    }
+}
+
+.heartIcon {
+    @include menu-heartIconStyle;
+    color: white;
+}
+
+.heartIcon:hover,
+.heartIcon:active,
+.heartIcon-menu:hover,
+.heartIcon-menu:active {
+    animation: heart-anim 1s ease;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+@keyframes heart-anim {
+    from {
+        color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+        -webkit-text-fill-color: transparent;
+        background-size: 100%;
     }
 
-    // ********************** Propriétés body, textes **************************
+    to {
+        -webkit-text-stroke: initial;
+        color: transparent;
+        background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+    }
+}
 
-    body,
-    html {
-        max-width: 100%;
-        margin: auto;
-        font-family: 'RobotoLight';
+// ********************** Pages menus **************************
+
+#menu__globalBlock {
+    @include bg-globalBlock($blockRadius: 80px);
+}
+
+#menu__titleBlock {
+    @include menu-title;
+
+    &--text {
+        @include menu-titleStyle;
     }
 
-    main {
-        width: 100%;
-        margin: auto;
+    &--icon {
+        @include menu-heartIconStyle($color: $lightgrey);
+        margin-right: 30px;
     }
+}
+
+.title__mealStep {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.mint-border {
+    width: 9%;
+    border-top: solid 6px $mintgreen;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.meal__entryGlobal {
+    width: 90%;
+    margin: auto;
+}
+
+.meal__entry1 {
+    @include meal-entry;
+    animation: apparition 0.8s ease-out;
+}
+
+.meal__entry2 {
+    @include meal-entry;
+    animation: apparition 1.2s ease-out;
+}
+
+.meal__entry3 {
+    @include meal-entry;
+    animation: apparition 1.6s ease-out;
+}
+
+.meal__entry4 {
+    @include meal-entry;
+    animation: apparition 2s ease-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#order__buttonBlock {
+    @include gradient-button-block;
+
+    &--button {
+        @include gradient-button;
+    }
+}
+
+.meal__entry1:hover .check__block {
+    width: 250px;
+    height: auto;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 2;
+
+    &:active {
+        background-color: $purple;
+    }
+}
+
+.meal__entry1:hover i.fas.fa-check-circle {
+    transform: rotate(360deg);
+    transition: 0.4s;
+}
+
+.meal__entry2:hover .check__block {
+    width: 250px;
+    height: auto;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 2;
+
+    &:active {
+        background-color: $purple;
+    }
+}
+
+.meal__entry2:hover i.fas.fa-check-circle {
+    transform: rotate(360deg);
+    transition: 0.4s;
+}
+
+.meal__entry3:hover .check__block {
+    width: 250px;
+    height: auto;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 2;
+
+    &:active {
+        background-color: $purple;
+    }
+}
+
+.meal__entry3:hover i.fas.fa-check-circle {
+    transform: rotate(360deg);
+    transition: 0.4s;
+}
+
+.meal__entry4:hover .check__block {
+    width: 250px;
+    height: auto;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 2;
+
+    &:active {
+        background-color: $purple;
+    }
+}
+
+.meal__entry4:hover i.fas.fa-check-circle {
+    transform: rotate(360deg);
+    transition: 0.4s;
+}
+
+.check__block {
+    display: flex;
+    width: 0%;
+    font-size: 5rem;
+    height: auto;
+    overflow: hidden;
+    color: white;
+    background-color: $mintgreen;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: width 0.4s linear;
+    z-index: 2;
+
+}
+
+// ********************** RESPONSIVE **************************
+
+@media screen and (min-width: 1025px) {
+
+    main,
+    body {
+        max-width: 1300px;
+    }
+
 
     h1 {
-        font-size: 4.5rem;
-        font-family: 'RobotoMedium';
-        font-weight: 500;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 4.1rem;
-        font-weight: 500;
-        font-family: 'RobotoMedium';
+        font-size: 1.5rem;
+    }
+
+    .h2-subtitle-index {
+        font-size: 1.4rem;
     }
 
     .h2-menus {
-        font-family: 'RobotoThin';
-        text-transform: uppercase;
         font-size: 2.3rem;
     }
 
     h3 {
-        font-size: 2.7rem;
-        font-family: 'RobotoMedium';
-        margin-bottom: -6%;
+        font-size: 1rem;
     }
 
     h4 {
-        font-size: 2.4rem;
-        font-family: 'RobotoMedium';
-        font-weight: 100;
+        font-size: 1rem;
     }
 
     .h4-meal-details {
-        font-family: 'RobotoThin';
         font-size: 2.3rem;
         margin-top: 60px;
     }
 
     h5 {
-        font-size: 2.5rem;
-        font-family: 'RobotoLight';
-        font-weight: 100;
-        margin-bottom: 0;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
     }
 
     span {
         font-size: 2rem;
-        font-family: 'RobotoThin';
     }
 
     p {
-        font-size: 2.5rem;
-        font-family: 'RobotoLight';
+        font-size: 1rem;
     }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+    .page-wrapper {
+        display: flex;
+        flex-wrap: wrap;
     }
 
-
-    // ********************** Page index : Fonctionnement / functioning **************************
-
-    #functioning__titleBlock {
-        margin: 5em 0 4em 3em;
+    .wrapped-left {
+        width: 45%;
+        margin-left: 5rem;
     }
+
+    aside {
+        width: 40%;
+        margin-left: 55%;
+        margin-top: -20.3rem;
+    }
+
+    // ********** RESPONSIVE -- Page index : Fonctionnement / functioning **************************
 
     #functioning__globalBlock {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 85%;
-        margin-bottom: 20rem;
+        margin-bottom: 10rem;
+    }
+
+    #functioning__titleBlock {
+        margin: 0 0 0.5rem 0;
+        text-align: center;
     }
 
     .functioning__entry {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
         width: 100%;
-        height: 10%;
-        background-color: $lightgrey;
-        border-radius: 50px;
-        margin: 1.5rem 0 1.5rem 0;
-        box-shadow: 2px 10px 18px darken($lightgrey, 10%);
+        height: 4rem;
+        margin: 0 0 1.8rem 0;
+        box-shadow: 2px 2px 5px darken($lightgrey, 10%);
 
         &--numberBlock {
-            background-color: $purple;
-            width: 6%;
-            height: 5%;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            margin-left: -1.5rem;
+            margin-left: -0.4rem;
 
             &--number {
-                color: $white;
-                display: flex;
-                font-size: 2rem;
-                margin: 8% 8%;
+                font-size: 0.8rem;
+                margin: 2px 2px;
             }
         }
 
@@ -199,289 +594,70 @@
             &--mobileIcon,
             &--listIcon,
             &--storeIcon {
-                font-size: 3rem;
-                color: darken($lightgrey, 50%);
+                font-size: 1rem;
             }
         }
 
-        &--text {
-            width: 80%;
-        }
     }
 
-    .current .functioning__entry {
-        background-color: rgba(147, 86, 220, 0.2)
-    }
-
-    .current .functioning__entry--iconBlock--storeIcon {
-        color: $purple;
-    }
-
-    // ********************** Page index : Restaurants **************************
+    // *********RESPONSIVE -- Page index : Restaurants **************************
 
     #restaurants__globalBlock {
-        @include bg-globalBlock;
-        border-radius: 0px;
+        padding-bottom: 5%;
     }
 
     #restaurants__titleBlock {
-        margin: 5em 0 0 3em;
+        margin: 2em 0 0 5em;
     }
 
     #restaurants__underBlock {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        width: 85%;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .restaurants__cards {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: 550px;
-        box-shadow: 6px 6px 10px darken($lightgrey, 20%);
-        border-radius: 50px;
-        margin-top: 100px;
+        width: 230px;
+        height: auto;
+        box-shadow: 2px 2px 5px darken($lightgrey, 20%);
+        border-radius: 20px;
+        margin-top: 20px;
 
         img {
-            width: 100%;
-            border-radius: 50px;
+            border-radius: 20px;
         }
 
         &--Tag {
-            background-color: $mintgreen;
-            color: darken($mintgreen, 40%);
-            display: flex;
-            position: absolute;
-            display: flex;
-            flex-direction: row;
-            align-self: flex-end;
-            margin: 40px;
-            width: 200px;
-            height: 80px;
-            justify-content: center;
-            align-items: center;
+            margin: 10px;
+            width: 70px;
+            height: 20px;
         }
 
         &--Banner {
-            background-color: $white;
-            width: 100%;
-            height: 175px;
-            margin-top: -20%;
-            opacity: 0.99;
-            display: flex;
-            flex-direction: row;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            box-shadow: 6px 6px 10px darken($lightgrey, 20%);
+            height: 65px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 2px 2px 5px darken($lightgrey, 20%);
 
             &--text {
                 width: 85%;
-                margin-left: 5%;
+                margin-left: 0.6rem;
+                margin-top: -0.5rem;
             }
 
             &--icon {
-                display: flex;
-                align-items: center;
-                height: auto;
-                width: 15%;
+
+                align-items: flex-end;
+
+                width: 20%;
                 margin-bottom: 3%;
             }
 
         }
     }
 
-    .heartIcon {
-        @include menu-heartIconStyle;
-        color: white;
+    i.fas.fa-heart {
+        font-size: 1.5rem;
     }
 
-    .heartIcon:hover,
-    .heartIcon:active,
-    .heartIcon-menu:hover,
-    .heartIcon-menu:active {
-        animation: heart-anim 1.5s ease-in-out;
-        animation-fill-mode: forwards;
-        cursor: pointer;
-    }
-
-    @keyframes heart-anim {
-        from {
-            color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
-            -webkit-text-fill-color: transparent;
-            background-size: 100%;
-        }
-
-        to {
-            -webkit-text-stroke: initial;
-            color: transparent;
-            background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-            background-size: 100%;
-            -webkit-background-clip: text;
-        }
-    }
-
-    // ********************** Pages menus **************************
-
-    #menu__globalBlock {
-        @include bg-globalBlock($blockRadius: 80px);
-    }
-
-    #menu__titleBlock {
-        @include menu-title;
-
-        &--text {
-            @include menu-titleStyle;
-        }
-
-        &--icon {
-            @include menu-heartIconStyle($color: $lightgrey);
-            margin-right: 30px;
-        }
-    }
-
-    .title__mealStep {
-        width: 90%;
-        margin: auto;
-        margin-top: 60px;
-    }
-
-    .mint-border {
-        width: 9%;
-        border-top: solid 6px $mintgreen;
-        margin-left: 50px;
-        margin-top: -20px;
-    }
-
-    .meal__entryGlobal {
-        width: 90%;
-        margin: auto;
-    }
-
-    .meal__entry1 {
-        @include meal-entry;
-        animation: apparition 0.8s ease-out;
-    }
-
-    .meal__entry2 {
-        @include meal-entry;
-        animation: apparition 1.2s ease-out;
-    }
-
-    .meal__entry3 {
-        @include meal-entry;
-        animation: apparition 1.6s ease-out;
-    }
-
-    .meal__entry4 {
-        @include meal-entry;
-        animation: apparition 2s ease-out;
-    }
-
-    @keyframes apparition {
-        from {
-            opacity: 0;
-            transform: translateY(100px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
-
-    #order__buttonBlock {
-        @include gradient-button-block;
-
-        &--button {
-            @include gradient-button;
-        }
-    }
-
-    .meal__entry1:hover .check__block {
-        width: 250px;
-        height: auto;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 2;
-
-        &:active {
-            background-color: $purple;
-        }
-    }
-
-    .meal__entry1:hover i.fas.fa-check-circle {
-        transform: rotate(360deg);
-        transition: 0.4s;
-    }
-
-    .meal__entry2:hover .check__block {
-        width: 250px;
-        height: auto;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 2;
-
-        &:active {
-            background-color: $purple;
-        }
-    }
-
-    .meal__entry2:hover i.fas.fa-check-circle {
-        transform: rotate(360deg);
-        transition: 0.4s;
-    }
-
-    .meal__entry3:hover .check__block {
-        width: 250px;
-        height: auto;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 2;
-
-        &:active {
-            background-color: $purple;
-        }
-    }
-
-    .meal__entry3:hover i.fas.fa-check-circle {
-        transform: rotate(360deg);
-        transition: 0.4s;
-    }
-
-    .meal__entry4:hover .check__block {
-        width: 250px;
-        height: auto;
-        font-size: 5rem;
-        cursor: pointer;
-        z-index: 2;
-
-        &:active {
-            background-color: $purple;
-        }
-    }
-
-    .meal__entry4:hover i.fas.fa-check-circle {
-        transform: rotate(360deg);
-        transition: 0.4s;
-    }
-
-    .check__block {
-        display: flex;
-        width: 0%;
-        font-size: 5rem;
-        height: auto;
-        overflow: hidden;
-        color: white;
-        background-color: $mintgreen;
-        justify-content: center;
-        align-items: center;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-        transition: width 0.4s linear;
-        z-index: 2;
-
-    }
 
 }

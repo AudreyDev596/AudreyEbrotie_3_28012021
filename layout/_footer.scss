@@ -54,3 +54,57 @@
     #footer__legalNotice {
         margin-bottom: -45px;
     }
+
+    // ********** RESPONSIVE -- Footer **************************
+
+    @media screen and (min-width: 1025px) {
+
+        #footer__logoBlock {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        #footer__globalText {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5%;
+        }
+
+        #footer__textBlock1 {
+            margin-bottom: 0%;
+
+            &--ustensilsIcon {
+                font-size: 2.2rem;
+                margin-right: 5%;
+                padding-bottom: 20px;
+            }
+
+        }
+
+        #footer__textBlock2 {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 0%;
+
+            &--partnershipIcon {
+                font-size: 1.8rem;
+                margin-right: 5%;
+                padding-bottom: 20px;
+            }
+
+        }
+
+        #footer__textBlock3 {
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+    }

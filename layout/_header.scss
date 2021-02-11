@@ -12,6 +12,9 @@
          display: flex;
          justify-content: center;
 
+         img {
+             width: 350px;
+         }
      }
  }
 
@@ -29,7 +32,6 @@
          width: 85%;
          display: flex;
          justify-content: center;
-
      }
 
      &--returnIcon {
@@ -53,4 +55,23 @@
      img {
          width: 100%;
      }
+ }
+
+ // *********RESPONSIVE -- Header index (logo) **************************
+
+ @media screen and (min-width: 1025px) {
+
+     #header__logoBlock {
+         width: 30%;
+         margin: 3rem 0 0 3rem;
+         justify-content: flex-start;
+
+
+         &--logo {
+
+             justify-content: flex-start;
+             width: 50px;
+         }
+     }
+
  }
