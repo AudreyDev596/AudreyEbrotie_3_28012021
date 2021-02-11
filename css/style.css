@@ -86,6 +86,21 @@
     background-color: transparent;
     border-style: none;
   }
+  input:hover::-webkit-input-placeholder {
+    color: lightgrey;
+  }
+  input:hover:-ms-input-placeholder {
+    color: lightgrey;
+  }
+  input:hover::-ms-input-placeholder {
+    color: lightgrey;
+  }
+  input:hover::placeholder {
+    color: lightgrey;
+  }
+  input:focus {
+    outline: none;
+  }
   #searchForm-titles-button {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -438,6 +453,9 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  #footer__contact {
+    margin-left: 5rem;
   }
 }
 

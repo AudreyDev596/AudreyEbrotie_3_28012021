@@ -43,6 +43,14 @@
           border-style: none;
       }
 
+      input:hover::placeholder {
+          color: lightgrey;
+      }
+
+      input:focus {
+          outline: none;
+      }
+
       #searchForm-titles-button {
           display: flex;
           flex-direction: column;
