@@ -48,39 +48,33 @@
         -webkit-text-stroke: 2px black;
     }
 
-    // ********************** Keyframes **************************
+    @mixin meal-entry {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: $white;
+        border-radius: 30px;
+        box-shadow: 2px 10px 20px darken($lightgrey, 10%);
+        margin-top: 40px;
 
-    @keyframes heart-anim {
-        from {
-            color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
-            -webkit-text-fill-color: transparent;
-            background-size: 100%;
+        &--text {
+            width: 80%;
+            margin-left: 30px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
-        to {
-            -webkit-text-stroke: initial;
-            color: transparent;
-            background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
-            background-size: 100%;
-            -webkit-background-clip: text;
-        }
-    }
-
-    @keyframes apparition-menu {
-        0% {
-            margin-top: -600px;
-            opacity: 0;
-        }
-
-        100% {
-            margin-top: 0;
-            opacity: 1;
+        &--price {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 55px;
         }
     }
 
-
-
-    // ********************** Paramètres body, textes **************************
+    // ********************** Propriétés body, textes **************************
 
     body,
     html {
@@ -124,6 +118,12 @@
         font-weight: 100;
     }
 
+    .h4-meal-details {
+        font-family: 'RobotoThin';
+        font-size: 2.3rem;
+        margin-top: 60px;
+    }
+
     h5 {
         font-size: 2.5rem;
         font-family: 'RobotoLight';
@@ -141,17 +141,10 @@
         font-family: 'RobotoLight';
     }
 
-    .h4-meal-details {
-        font-family: 'RobotoThin';
-        font-size: 2.3rem;
-        margin-top: 60px;
-    }
-
     a {
         text-decoration: none;
-        color: black;
+        color: inherit;
     }
-
 
 
     // ********************** Page index : Fonctionnement / functioning **************************
@@ -240,15 +233,14 @@
         flex-direction: column;
         margin: auto;
         width: 85%;
-        overflow: hidden;
     }
 
     .restaurants__cards {
         display: flex;
         flex-direction: column;
         width: auto;
-        height: 570px;
-        box-shadow: 8px 8px 15px darken($lightgrey, 20%);
+        height: 550px;
+        box-shadow: 6px 6px 10px darken($lightgrey, 20%);
         border-radius: 50px;
         margin-top: 100px;
 
@@ -275,13 +267,14 @@
         &--Banner {
             background-color: $white;
             width: 100%;
-            height: 170px;
+            height: 175px;
             margin-top: -20%;
             opacity: 0.99;
             display: flex;
             flex-direction: row;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
+            box-shadow: 6px 6px 10px darken($lightgrey, 20%);
 
             &--text {
                 width: 85%;
@@ -308,12 +301,26 @@
     .heartIcon:active,
     .heartIcon-menu:hover,
     .heartIcon-menu:active {
-        animation: heart-anim 2s ease-in-out;
+        animation: heart-anim 1.5s ease-in-out;
         animation-fill-mode: forwards;
         cursor: pointer;
-
     }
 
+    @keyframes heart-anim {
+        from {
+            color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+            -webkit-text-fill-color: transparent;
+            background-size: 100%;
+        }
+
+        to {
+            -webkit-text-stroke: initial;
+            color: transparent;
+            background-image: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+        }
+    }
 
     // ********************** Pages menus **************************
 
@@ -350,34 +357,37 @@
     .meal__entryGlobal {
         width: 90%;
         margin: auto;
-        animation: 1.5s apparition-menu;
     }
 
-    .meal__entry {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        background-color: $white;
-        border-radius: 30px;
-        box-shadow: 2px 10px 20px darken($lightgrey, 10%);
-        margin-top: 40px;
+    .meal__entry1 {
+        @include meal-entry;
+        animation: apparition 0.8s ease-out;
+    }
 
+    .meal__entry2 {
+        @include meal-entry;
+        animation: apparition 1.2s ease-out;
+    }
 
-        &--text {
-            width: 80%;
-            margin-left: 30px;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
+    .meal__entry3 {
+        @include meal-entry;
+        animation: apparition 1.6s ease-out;
+    }
 
+    .meal__entry4 {
+        @include meal-entry;
+        animation: apparition 2s ease-out;
+    }
+
+    @keyframes apparition {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
         }
 
-        &--price {
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 55px;
+        to {
+            opacity: 1;
+            transform: translateY(0px);
         }
     }
 
@@ -389,18 +399,70 @@
         }
     }
 
-    .meal__entry:hover .check__block {
+    .meal__entry1:hover .check__block {
         width: 250px;
         height: auto;
         font-size: 5rem;
         cursor: pointer;
+        z-index: 2;
 
         &:active {
             background-color: $purple;
         }
     }
 
-    .meal__entry:hover i.fas.fa-check-circle {
+    .meal__entry1:hover i.fas.fa-check-circle {
+        transform: rotate(360deg);
+        transition: 0.4s;
+    }
+
+    .meal__entry2:hover .check__block {
+        width: 250px;
+        height: auto;
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 2;
+
+        &:active {
+            background-color: $purple;
+        }
+    }
+
+    .meal__entry2:hover i.fas.fa-check-circle {
+        transform: rotate(360deg);
+        transition: 0.4s;
+    }
+
+    .meal__entry3:hover .check__block {
+        width: 250px;
+        height: auto;
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 2;
+
+        &:active {
+            background-color: $purple;
+        }
+    }
+
+    .meal__entry3:hover i.fas.fa-check-circle {
+        transform: rotate(360deg);
+        transition: 0.4s;
+    }
+
+    .meal__entry4:hover .check__block {
+        width: 250px;
+        height: auto;
+        font-size: 5rem;
+        cursor: pointer;
+        z-index: 2;
+
+        &:active {
+            background-color: $purple;
+        }
+    }
+
+    .meal__entry4:hover i.fas.fa-check-circle {
         transform: rotate(360deg);
         transition: 0.4s;
     }
@@ -417,7 +479,8 @@
         align-items: center;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        transition: width 0.4s;
+        transition: width 0.4s linear;
+        z-index: 2;
 
     }
 
