@@ -394,16 +394,10 @@ a {
     }
 }
 
-#order__buttonBlock {
-    @include gradient-button-block;
 
-    &--button {
-        @include gradient-button;
-    }
-}
 
 .meal__entry1:hover .check__block {
-    width: 250px;
+    width: 30%;
     height: auto;
     font-size: 5rem;
     cursor: pointer;
@@ -420,7 +414,7 @@ a {
 }
 
 .meal__entry2:hover .check__block {
-    width: 250px;
+    width: 30%;
     height: auto;
     font-size: 5rem;
     cursor: pointer;
@@ -437,7 +431,7 @@ a {
 }
 
 .meal__entry3:hover .check__block {
-    width: 250px;
+    width: 30%;
     height: auto;
     font-size: 5rem;
     cursor: pointer;
@@ -454,7 +448,7 @@ a {
 }
 
 .meal__entry4:hover .check__block {
-    width: 250px;
+    width: 30%;
     height: auto;
     font-size: 5rem;
     cursor: pointer;
@@ -510,7 +504,7 @@ a {
     }
 
     .h2-menus {
-        font-size: 2.3rem;
+        font-size: 1.3rem;
     }
 
     h3 {
@@ -518,17 +512,21 @@ a {
     }
 
     h4 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .h4-meal-details {
-        font-size: 2.3rem;
-        margin-top: 60px;
+        font-size: 0.8rem;
+        margin-top: 20px;
     }
 
     h5 {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 10px;
+    }
+
+    h6 {
+        font-size: 2.5rem;
     }
 
     span {
@@ -604,6 +602,8 @@ a {
 
     #restaurants__globalBlock {
         padding-bottom: 5%;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
     }
 
     #restaurants__titleBlock {
@@ -621,6 +621,7 @@ a {
         box-shadow: 2px 2px 5px darken($lightgrey, 20%);
         border-radius: 20px;
         margin-top: 20px;
+        margin: 5px;
 
         img {
             border-radius: 20px;
@@ -647,7 +648,6 @@ a {
             &--icon {
 
                 align-items: flex-end;
-
                 width: 20%;
                 margin-bottom: 3%;
             }
@@ -660,4 +660,93 @@ a {
     }
 
 
+    // *********RESPONSIVE -- Pages menus **************************
+
+    #menu__globalBlock {
+        margin-top: 25rem;
+        padding-bottom: 0%;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    #menu__titleBlock {
+        position: relative;
+        top: -15rem;
+        left: -8rem;
+        width: 720px;
+        height: 100px;
+        align-items: center;
+
+
+        &--icon {
+            font-size: 2rem;
+            color: white;
+            margin-right: 40%;
+        }
+
+    }
+
+    .menus-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #title__mealStep {
+        width: 20%;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mint-border {
+        width: 9%;
+        border-top: solid 4px $mintgreen;
+        margin-left: 21px;
+        margin-top: -15px;
+    }
+
+    .wrapper-mealStep-meal {
+        width: 33.3%;
+        margin-top: 5rem;
+    }
+
+    .meal__entry1,
+    .meal__entry2,
+    .meal__entry3,
+    .meal__entry4 {
+        height: 4.5rem;
+        margin-top: 30px;
+        border-radius: 10px;
+
+        &--text {
+            margin-left: 10px;
+        }
+
+        &--price {
+            padding-top: 20px;
+        }
+
+    }
+
+    .check__block {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 3rem;
+    }
+
+    .meal__entry1:hover .check__block {
+        font-size: 3rem;
+    }
+
+    .meal__entry2:hover .check__block {
+        font-size: 3rem;
+    }
+
+    .meal__entry3:hover .check__block {
+        font-size: 3rem;
+    }
+
+    .meal__entry4:hover .check__block {
+        font-size: 3rem;
+    }
 }

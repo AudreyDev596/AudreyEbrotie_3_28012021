@@ -74,4 +74,26 @@
          }
      }
 
+
+     // *********RESPONSIVE -- Header pages menus (logo+image) **************************
+
+     #image__header-menus {
+         width: 45%;
+         margin-top: 70px;
+         float: right;
+
+         img {
+             width: 450px;
+             border-radius: 20px;
+             border: 4px solid $mintgreen;
+             box-shadow: 2px 2px 5px darken($lightgrey, 40%);
+
+         }
+     }
+
+     i.fas.fa-arrow-left {
+         font-size: 1.5rem;
+     }
+
+
  }
