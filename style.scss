@@ -607,16 +607,17 @@ a {
     }
 
     #restaurants__titleBlock {
-        margin: 2em 0 0 5em;
+        margin: 2em 0 0 2.3em;
     }
 
     #restaurants__underBlock {
         flex-direction: row;
         justify-content: space-between;
+        width: 95%;
     }
 
     .restaurants__cards {
-        width: 230px;
+        width: 270px;
         height: auto;
         box-shadow: 2px 2px 5px darken($lightgrey, 20%);
         border-radius: 20px;

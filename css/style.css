@@ -1478,7 +1478,7 @@ a {
     border-top-left-radius: 20px;
   }
   #restaurants__titleBlock {
-    margin: 2em 0 0 5em;
+    margin: 2em 0 0 2.3em;
   }
   #restaurants__underBlock {
     -webkit-box-orient: horizontal;
@@ -1488,9 +1488,10 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 95%;
   }
   .restaurants__cards {
-    width: 230px;
+    width: 270px;
     height: auto;
     -webkit-box-shadow: 2px 2px 5px #c6c6c6;
             box-shadow: 2px 2px 5px #c6c6c6;
