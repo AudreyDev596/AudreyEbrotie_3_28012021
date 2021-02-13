@@ -311,7 +311,7 @@ a {
 
 @keyframes heart-anim {
     from {
-        color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+        color: linear-gradient(0deg, #9356DC 30%, #FF79DA 30%);
         -webkit-text-fill-color: transparent;
         background-size: 100%;
     }
@@ -393,8 +393,6 @@ a {
         transform: translateY(0px);
     }
 }
-
-
 
 .meal__entry1:hover .check__block {
     width: 30%;
@@ -508,11 +506,11 @@ a {
     }
 
     h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     h4 {
-        font-size: 0.8rem;
+        font-size: 1.3rem;
     }
 
     .h4-meal-details {
@@ -534,7 +532,7 @@ a {
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .page-wrapper {
@@ -571,13 +569,13 @@ a {
         box-shadow: 2px 2px 5px darken($lightgrey, 10%);
 
         &--numberBlock {
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
             margin-left: -0.4rem;
 
             &--number {
-                font-size: 0.8rem;
+                font-size: 1.1rem;
                 margin: 2px 2px;
             }
         }
@@ -592,7 +590,7 @@ a {
             &--mobileIcon,
             &--listIcon,
             &--storeIcon {
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -613,16 +611,17 @@ a {
     #restaurants__underBlock {
         flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 95%;
     }
 
     .restaurants__cards {
-        width: 270px;
+        width: 260px;
         height: auto;
         box-shadow: 2px 2px 5px darken($lightgrey, 20%);
         border-radius: 20px;
         margin-top: 20px;
-        margin: 5px;
+        margin-bottom: 1rem;
 
         img {
             border-radius: 20px;
@@ -630,8 +629,8 @@ a {
 
         &--Tag {
             margin: 10px;
-            width: 70px;
-            height: 20px;
+            width: 90px;
+            height: 35px;
         }
 
         &--Banner {
@@ -643,7 +642,7 @@ a {
             &--text {
                 width: 85%;
                 margin-left: 0.6rem;
-                margin-top: -0.5rem;
+                margin-top: -0.9rem;
             }
 
             &--icon {
@@ -680,9 +679,9 @@ a {
 
 
         &--icon {
-            font-size: 2rem;
             color: white;
             margin-right: 40%;
+            padding-bottom: 1.8rem;
         }
 
     }

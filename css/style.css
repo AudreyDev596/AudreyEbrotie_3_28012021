@@ -986,7 +986,7 @@ a {
 
 @-webkit-keyframes heart-anim {
   from {
-    color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+    color: linear-gradient(0deg, #9356DC 30%, #FF79DA 30%);
     -webkit-text-fill-color: transparent;
     background-size: 100%;
   }
@@ -1002,7 +1002,7 @@ a {
 
 @keyframes heart-anim {
   from {
-    color: linear-gradient(0deg, #9356DC 0%, #FF79DA 30%);
+    color: linear-gradient(0deg, #9356DC 30%, #FF79DA 30%);
     -webkit-text-fill-color: transparent;
     background-size: 100%;
   }
@@ -1391,10 +1391,10 @@ a {
     font-size: 1.3rem;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   h4 {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
   .h4-meal-details {
     font-size: 0.8rem;
@@ -1411,7 +1411,7 @@ a {
     font-size: 2rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .page-wrapper {
     display: -webkit-box;
@@ -1444,13 +1444,13 @@ a {
             box-shadow: 2px 2px 5px #e0e0e0;
   }
   .functioning__entry--numberBlock {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     margin-left: -0.4rem;
   }
   .functioning__entry--numberBlock--number {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     margin: 2px 2px;
   }
   .functioning__entry--iconBlock {
@@ -1470,7 +1470,7 @@ a {
             align-items: center;
   }
   .functioning__entry--iconBlock--mobileIcon, .functioning__entry--iconBlock--listIcon, .functioning__entry--iconBlock--storeIcon {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   #restaurants__globalBlock {
     padding-bottom: 5%;
@@ -1488,24 +1488,26 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 95%;
   }
   .restaurants__cards {
-    width: 270px;
+    width: 260px;
     height: auto;
     -webkit-box-shadow: 2px 2px 5px #c6c6c6;
             box-shadow: 2px 2px 5px #c6c6c6;
     border-radius: 20px;
     margin-top: 20px;
-    margin: 5px;
+    margin-bottom: 1rem;
   }
   .restaurants__cards img {
     border-radius: 20px;
   }
   .restaurants__cards--Tag {
     margin: 10px;
-    width: 70px;
-    height: 20px;
+    width: 90px;
+    height: 35px;
   }
   .restaurants__cards--Banner {
     height: 65px;
@@ -1517,7 +1519,7 @@ a {
   .restaurants__cards--Banner--text {
     width: 85%;
     margin-left: 0.6rem;
-    margin-top: -0.5rem;
+    margin-top: -0.9rem;
   }
   .restaurants__cards--Banner--icon {
     -webkit-box-align: end;
@@ -1546,9 +1548,9 @@ a {
             align-items: center;
   }
   #menu__titleBlock--icon {
-    font-size: 2rem;
     color: white;
     margin-right: 40%;
+    padding-bottom: 1.8rem;
   }
   .menus-wrapper {
     display: -webkit-box;
