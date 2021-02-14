@@ -1439,10 +1439,13 @@ a {
     font-size: 1.3rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  .h3-card-resp {
+    font-size: 1.2rem;
   }
   h4 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .h4-meal-details {
     font-size: 0.8rem;
@@ -1638,10 +1641,16 @@ a {
     margin-top: 30px;
     border-radius: 10px;
   }
-  .meal__entry1--text,
+  .meal__entry1--text, .meal__entry1--textLong, .meal__entry1--textCutted,
   .meal__entry2--text,
+  .meal__entry2--textLong,
+  .meal__entry2--textCutted,
   .meal__entry3--text,
-  .meal__entry4--text {
+  .meal__entry3--textLong,
+  .meal__entry3--textCutted,
+  .meal__entry4--text,
+  .meal__entry4--textLong,
+  .meal__entry4--textCutted {
     margin-left: 10px;
   }
   .meal__entry1--price,
