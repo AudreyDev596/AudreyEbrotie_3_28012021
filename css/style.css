@@ -85,6 +85,7 @@
     height: 100%;
     background-color: transparent;
     border-style: none;
+    font-size: 2rem;
   }
   input:hover::-webkit-input-placeholder {
     color: lightgrey;
@@ -210,6 +211,7 @@
   }
   input {
     margin-top: 0.1rem;
+    font-size: 1rem;
   }
   #searchForm-titles-button {
     -webkit-box-shadow: 2px 2px 5px #adadad;
