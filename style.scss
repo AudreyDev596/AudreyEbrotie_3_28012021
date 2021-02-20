@@ -54,13 +54,9 @@
     box-shadow: 2px 10px 20px darken($lightgrey, 10%);
     margin-top: 40px;
 
-    &--text,
-    &--textLong,
-    &--textCutted {
+    &--text {
         width: 80%;
         margin-left: 30px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
     }
 
@@ -71,14 +67,6 @@
         align-items: center;
         padding-top: 55px;
     }
-}
-
-@mixin textLong-hover {
-    display: none;
-}
-
-@mixin textCutted-hover {
-    display: block;
 }
 
 // ********************** Propriétés body, textes **************************
@@ -125,6 +113,16 @@ h3 {
     margin-bottom: -6%;
 }
 
+.h3-meal-title {
+    font-size: 2.7rem;
+    font-family: 'RobotoMedium';
+    margin-bottom: -6%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+}
+
 h4 {
     font-size: 2.4rem;
     font-family: 'RobotoMedium';
@@ -135,6 +133,10 @@ h4 {
     font-family: 'RobotoThin';
     font-size: 2.3rem;
     margin-top: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
 }
 
 h5 {
@@ -396,7 +398,7 @@ a {
     align-items: center;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    transition: width 0.4s linear;
+    transition: width 0.6s linear;
     z-index: 2;
 
 }
@@ -404,10 +406,6 @@ a {
 .meal__entry1 {
     @include meal-entry;
     animation: apparition 0.8s ease-out;
-
-    &--textCutted {
-        display: none;
-    }
 }
 
 .meal__entry1:hover .check__block {
@@ -424,24 +422,12 @@ a {
 
 .meal__entry1:hover i.fas.fa-check-circle {
     transform: rotate(360deg);
-    transition: 0.4s;
-}
-
-.meal__entry1:hover .meal__entry1--textLong {
-    @include textLong-hover;
-}
-
-.meal__entry1:hover .meal__entry1--textCutted {
-    @include textCutted-hover;
+    transition: 0.6s;
 }
 
 .meal__entry2 {
     @include meal-entry;
     animation: apparition 1.2s ease-out;
-
-    &--textCutted {
-        display: none;
-    }
 }
 
 .meal__entry2:hover .check__block {
@@ -458,24 +444,12 @@ a {
 
 .meal__entry2:hover i.fas.fa-check-circle {
     transform: rotate(360deg);
-    transition: 0.4s;
-}
-
-.meal__entry2:hover .meal__entry2--textLong {
-    @include textLong-hover;
-}
-
-.meal__entry2:hover .meal__entry2--textCutted {
-    @include textCutted-hover;
+    transition: 0.6s;
 }
 
 .meal__entry3 {
     @include meal-entry;
     animation: apparition 1.6s ease-out;
-
-    &--textCutted {
-        display: none;
-    }
 }
 
 .meal__entry3:hover .check__block {
@@ -492,24 +466,12 @@ a {
 
 .meal__entry3:hover i.fas.fa-check-circle {
     transform: rotate(360deg);
-    transition: 0.4s;
-}
-
-.meal__entry3:hover .meal__entry3--textLong {
-    @include textLong-hover;
-}
-
-.meal__entry3:hover .meal__entry3--textCutted {
-    @include textCutted-hover;
+    transition: 0.6s;
 }
 
 .meal__entry4 {
     @include meal-entry;
     animation: apparition 2s ease-out;
-
-    &--textCutted {
-        display: none;
-    }
 }
 
 .meal__entry4:hover .check__block {
@@ -526,15 +488,7 @@ a {
 
 .meal__entry4:hover i.fas.fa-check-circle {
     transform: rotate(360deg);
-    transition: 0.4s;
-}
-
-.meal__entry4:hover .meal__entry4--textLong {
-    @include textLong-hover;
-}
-
-.meal__entry4:hover .meal__entry4--textCutted {
-    @include textCutted-hover;
+    transition: 0.6s;
 }
 
 // ********************** RESPONSIVE **************************
@@ -564,6 +518,10 @@ a {
     }
 
     h3 {
+        font-size: 1rem;
+    }
+
+    .h3-meal-title {
         font-size: 1rem;
     }
 
@@ -780,9 +738,7 @@ a {
         margin-top: 30px;
         border-radius: 10px;
 
-        &--text,
-        &--textLong,
-        &--textCutted {
+        &--text {
             margin-left: 10px;
         }
 

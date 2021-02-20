@@ -724,6 +724,16 @@ h3 {
   margin-bottom: -6%;
 }
 
+.h3-meal-title {
+  font-size: 2.7rem;
+  font-family: 'RobotoMedium';
+  margin-bottom: -6%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+}
+
 h4 {
   font-size: 2.4rem;
   font-family: 'RobotoMedium';
@@ -734,6 +744,10 @@ h4 {
   font-family: 'RobotoThin';
   font-size: 2.3rem;
   margin-top: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
 }
 
 h5 {
@@ -1130,8 +1144,8 @@ a {
           align-items: center;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  -webkit-transition: width 0.4s linear;
-  transition: width 0.4s linear;
+  -webkit-transition: width 0.6s linear;
+  transition: width 0.6s linear;
   z-index: 2;
 }
 
@@ -1153,11 +1167,9 @@ a {
           animation: apparition 0.8s ease-out;
 }
 
-.meal__entry1--text, .meal__entry1--textLong, .meal__entry1--textCutted {
+.meal__entry1--text {
   width: 80%;
   margin-left: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -1176,10 +1188,6 @@ a {
   padding-top: 55px;
 }
 
-.meal__entry1--textCutted {
-  display: none;
-}
-
 .meal__entry1:hover .check__block {
   width: 30%;
   height: auto;
@@ -1195,16 +1203,8 @@ a {
 .meal__entry1:hover i.fas.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.meal__entry1:hover .meal__entry1--textLong {
-  display: none;
-}
-
-.meal__entry1:hover .meal__entry1--textCutted {
-  display: block;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .meal__entry2 {
@@ -1225,11 +1225,9 @@ a {
           animation: apparition 1.2s ease-out;
 }
 
-.meal__entry2--text, .meal__entry2--textLong, .meal__entry2--textCutted {
+.meal__entry2--text {
   width: 80%;
   margin-left: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -1248,10 +1246,6 @@ a {
   padding-top: 55px;
 }
 
-.meal__entry2--textCutted {
-  display: none;
-}
-
 .meal__entry2:hover .check__block {
   width: 30%;
   height: auto;
@@ -1267,16 +1261,8 @@ a {
 .meal__entry2:hover i.fas.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.meal__entry2:hover .meal__entry2--textLong {
-  display: none;
-}
-
-.meal__entry2:hover .meal__entry2--textCutted {
-  display: block;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .meal__entry3 {
@@ -1297,11 +1283,9 @@ a {
           animation: apparition 1.6s ease-out;
 }
 
-.meal__entry3--text, .meal__entry3--textLong, .meal__entry3--textCutted {
+.meal__entry3--text {
   width: 80%;
   margin-left: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -1320,10 +1304,6 @@ a {
   padding-top: 55px;
 }
 
-.meal__entry3--textCutted {
-  display: none;
-}
-
 .meal__entry3:hover .check__block {
   width: 30%;
   height: auto;
@@ -1339,16 +1319,8 @@ a {
 .meal__entry3:hover i.fas.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.meal__entry3:hover .meal__entry3--textLong {
-  display: none;
-}
-
-.meal__entry3:hover .meal__entry3--textCutted {
-  display: block;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .meal__entry4 {
@@ -1369,11 +1341,9 @@ a {
           animation: apparition 2s ease-out;
 }
 
-.meal__entry4--text, .meal__entry4--textLong, .meal__entry4--textCutted {
+.meal__entry4--text {
   width: 80%;
   margin-left: 30px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -1392,10 +1362,6 @@ a {
   padding-top: 55px;
 }
 
-.meal__entry4--textCutted {
-  display: none;
-}
-
 .meal__entry4:hover .check__block {
   width: 30%;
   height: auto;
@@ -1411,16 +1377,8 @@ a {
 .meal__entry4:hover i.fas.fa-check-circle {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.meal__entry4:hover .meal__entry4--textLong {
-  display: none;
-}
-
-.meal__entry4:hover .meal__entry4--textCutted {
-  display: block;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1441,6 +1399,9 @@ a {
     font-size: 1.3rem;
   }
   h3 {
+    font-size: 1rem;
+  }
+  .h3-meal-title {
     font-size: 1rem;
   }
   .h3-card-resp {
@@ -1643,16 +1604,10 @@ a {
     margin-top: 30px;
     border-radius: 10px;
   }
-  .meal__entry1--text, .meal__entry1--textLong, .meal__entry1--textCutted,
+  .meal__entry1--text,
   .meal__entry2--text,
-  .meal__entry2--textLong,
-  .meal__entry2--textCutted,
   .meal__entry3--text,
-  .meal__entry3--textLong,
-  .meal__entry3--textCutted,
-  .meal__entry4--text,
-  .meal__entry4--textLong,
-  .meal__entry4--textCutted {
+  .meal__entry4--text {
     margin-left: 10px;
   }
   .meal__entry1--price,
