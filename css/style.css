@@ -1636,15 +1636,19 @@ a {
   }
   .meal__entry1:hover .check__block {
     font-size: 3rem;
+    width: 25%;
   }
   .meal__entry2:hover .check__block {
     font-size: 3rem;
+    width: 25%;
   }
   .meal__entry3:hover .check__block {
     font-size: 3rem;
+    width: 25%;
   }
   .meal__entry4:hover .check__block {
     font-size: 3rem;
+    width: 25%;
   }
 }
 /*# sourceMappingURL=style.css.map */
