@@ -740,6 +740,13 @@ h4 {
   font-weight: 100;
 }
 
+.h4-tag {
+  font-size: 2.4rem;
+  font-family: 'RobotoMedium';
+  font-weight: 100;
+  margin: 0;
+}
+
 .h4-meal-details {
   font-family: 'RobotoThin';
   font-size: 2.3rem;
@@ -935,9 +942,9 @@ a {
           flex-direction: row;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  margin: 40px;
-  width: 200px;
-  height: 80px;
+  margin: 4%;
+  width: 20%;
+  height: 7%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1410,6 +1417,10 @@ a {
   h4 {
     font-size: 1.1rem;
   }
+  .h4-tag {
+    font-size: 1.1rem;
+    margin: 0;
+  }
   .h4-meal-details {
     font-size: 0.8rem;
     margin-top: 20px;
@@ -1520,8 +1531,8 @@ a {
   }
   .restaurants__cards--Tag {
     margin: 10px;
-    width: 90px;
-    height: 35px;
+    width: 5%;
+    height: 5%;
   }
   .restaurants__cards--Banner {
     height: 65px;
