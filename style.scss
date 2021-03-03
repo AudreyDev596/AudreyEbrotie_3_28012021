@@ -71,11 +71,12 @@
 
 // ********************** Propriétés body, textes **************************
 
-body,
-html {
+html,
+body {
     max-width: 100%;
     margin: auto;
     font-family: 'RobotoLight';
+    margin: 0;
 }
 
 main {
@@ -502,8 +503,7 @@ a {
 
 @media screen and (min-width: 1025px) {
 
-    main,
-    body {
+    main {
         max-width: 1300px;
     }
 

@@ -61,15 +61,16 @@
 
  @media screen and (min-width: 1025px) {
 
+     header {
+         max-width: 1300px;
+         margin: auto;
+     }
+
      #header__logoBlock {
-         width: 30%;
-         margin: 3rem 0 0 3rem;
+         margin: 3rem 0 0 5rem;
          justify-content: flex-start;
 
-
          &--logo {
-
-             justify-content: flex-start;
              width: 50px;
          }
      }
