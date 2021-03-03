@@ -233,13 +233,19 @@ a {
     }
 }
 
-.current .functioning__entry {
+.functioning__entry:hover {
     background-color: rgba(147, 86, 220, 0.2)
 }
 
-.current .functioning__entry--iconBlock--storeIcon {
-    color: $purple;
+.functioning__entry:hover .functioning__entry--iconBlock {
+
+    &--mobileIcon,
+    &--listIcon,
+    &--storeIcon {
+        color: $purple;
+    }
 }
+
 
 // ********************** Page index : Restaurants **************************
 

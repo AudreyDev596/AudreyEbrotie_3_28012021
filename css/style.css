@@ -868,11 +868,11 @@ a {
   width: 80%;
 }
 
-.current .functioning__entry {
+.functioning__entry:hover {
   background-color: rgba(147, 86, 220, 0.2);
 }
 
-.current .functioning__entry--iconBlock--storeIcon {
+.functioning__entry:hover .functioning__entry--iconBlock--mobileIcon, .functioning__entry:hover .functioning__entry--iconBlock--listIcon, .functioning__entry:hover .functioning__entry--iconBlock--storeIcon {
   color: #9356DC;
 }
 
